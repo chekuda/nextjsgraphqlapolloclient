@@ -1,0 +1,13 @@
+.description {
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card {
+  width: 300px;
+  margin: 10px;
+}
+
+.cardMedia {
+  height: 100px;
+}
