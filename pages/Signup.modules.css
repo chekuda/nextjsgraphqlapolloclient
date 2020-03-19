@@ -33,17 +33,3 @@
 .submit{
   width: 100%;
 }
-
-.signup {
-  margin: 0 auto;
-  width: 90%;
-}
-
-.signupButton {
-  width: 100%;
-}
-
-.link{
-  text-decoration: none;
-  color: var(--primary-color);
-}

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
@@ -12,12 +11,13 @@ export default () => {
   return <div className={styles.content}>
     <Paper elevation={3} className={styles.paper}>
       <Typography align='center' variant='h2' gutterBottom={true}>
-        Login
+        Signup
       </Typography>
       <Divider />
-      <div className={styles.form}>
+      <form className={styles.form}>
         <TextField id="username" label="Username" margin='normal'/>
-        <TextField id="password" label="Password" margin='normal'/>
+        <TextField id="email" label="Email" type='email' margin='normal'/>
+        <TextField id="password" label="Password" type='password' margin='normal'/>
         <div className={styles.buttonBox}>
           <Button
             className={styles.submit}
@@ -25,24 +25,10 @@ export default () => {
             size='large'
             variant='contained'
           >
-            LogIn
+            Signup
           </Button>
         </div>
-      </div>
-      <div className={styles.signup}>
-        <Button
-          className={styles.signupButton}
-          size='large'
-          variant='text'
-        >
-          <Typography align='center' color='primary'>
-            <Link href='/signup'>
-              <a className={styles.link}>Sign Up</a>
-            </Link>
-          </Typography>
-        </Button>
-      </div>
+      </form>
     </Paper>
   </div>
 }
-
