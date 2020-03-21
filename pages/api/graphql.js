@@ -1,7 +1,7 @@
 import { graphql, buildSchema } from 'graphql'
 
 import { getUsers, getUserById } from './user'
-import postController from './post'
+import { createPost, getPosts, findPostsByUserId } from './post'
 
 /*
   buildSchema allows us to define (using GraphQL - the query language itself)
@@ -15,19 +15,26 @@ const schema = buildSchema(`
     surname: String
   }
   type Post {
-    name: String
+    userId: ID
+    title: String
   }
   type Query {
     getUsers: [User]
     getUserById(id: ID): User
-    post: [Post]
+    getPosts: [Post]
+    findPostsByUserId(userId: ID): [Post]
   }
+  type Mutation {
+    createPost(userId: ID!, title: String!): Post
+}
 `);
 
 const root = {
   getUsers,
   getUserById,
-  post: postController
+  createPost,
+  getPosts,
+  findPostsByUserId
 }
 
 export default async (req, res) => {

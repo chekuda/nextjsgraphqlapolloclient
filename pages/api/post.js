@@ -1,7 +1,17 @@
 import Post from '../../models/post'
 import connectToDb from './middlewares/db'
 
-const handler = async () => {
+export const createPost = connectToDb(async ({ userId, title }) => {
+  try {
+    let post = await Post.create({ userId, title })
+    return post
+  }
+  catch(e) {
+    return e
+  }
+})
+
+export const getPosts = connectToDb(async() => {
   try {
     let post = await Post.find({})
     return post
@@ -9,6 +19,14 @@ const handler = async () => {
   catch(e) {
     return e
   }
-}
+})
 
-export default connectToDb(handler)
+export const findPostsByUserId = connectToDb(async({ userId }) => {
+  try {
+    let post = await Post.find({ userId })
+    return post
+  }
+  catch(e) {
+    return e
+  }
+})
