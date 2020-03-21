@@ -1,5 +1,60 @@
+import isEmail from 'validator/lib/isEmail'
+import bcrypt from 'bcrypt'
 import User from '../../models/user'
 import connectToDb from './middlewares/db'
+
+const validateEmail = email => {
+  if(!email || !isEmail(email)) {
+    throw new Error('Not valid email')
+  }
+}
+
+/*
+ * SignUp
+*/
+export const signUp = connectToDb(async ({
+  userName,
+  email,
+  password
+}) => {
+  try {
+    validateEmail(email)
+    const existingUser = await User.find({ email })
+    if(existingUser.length !== 0) {
+      throw new Error('User Already exist')
+    }
+    const hashedPassword = await bcrypt.hash(password, 10)
+    let user = await User.create({
+      userName,
+      email,
+      password: hashedPassword
+    })
+    return user
+  }
+  catch(err) {
+    return err
+  }
+})
+
+/**
+ * Login
+*/
+
+export const login = connectToDb(async ({ email, password }) => {
+  try {
+    validateEmail(email)
+    const user = await User.findOne({ email })
+    const isValidPassword = await bcrypt.compare(password, user.password)
+    if(!isValidPassword) {
+      throw new Error('Wrong password')
+    }
+    return user
+  }
+  catch(e) {
+    return e
+  }
+})
+
 
 /*
   Get all users
@@ -19,7 +74,6 @@ export const getUsers = connectToDb(async () => {
 */
 
 export const getUserById = connectToDb(async ({ id }) => {
-  console.log('id', id)
   try {
     let user = await User.findById(id)
     return user

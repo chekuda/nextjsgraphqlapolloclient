@@ -1,6 +1,6 @@
 import { graphql, buildSchema } from 'graphql'
 
-import { getUsers, getUserById } from './user'
+import { getUsers, getUserById, signUp, login } from './user'
 import { createPost, getPosts, findPostsByUserId } from './post'
 
 /*
@@ -11,8 +11,9 @@ import { createPost, getPosts, findPostsByUserId } from './post'
 
 const schema = buildSchema(`
   type User {
-    name: String
-    surname: String
+    userName: String
+    email: String
+    password: String
   }
   type Post {
     userId: ID
@@ -21,12 +22,14 @@ const schema = buildSchema(`
   type Query {
     getUsers: [User]
     getUserById(id: ID): User
+    login(email: String, password: String): User
     getPosts: [Post]
     findPostsByUserId(userId: ID): [Post]
   }
   type Mutation {
     createPost(userId: ID!, title: String!): Post
-}
+    signUp(userName: String, email: String, password: String): User
+  }
 `);
 
 const root = {
@@ -34,7 +37,9 @@ const root = {
   getUserById,
   createPost,
   getPosts,
-  findPostsByUserId
+  findPostsByUserId,
+  signUp,
+  login
 }
 
 export default async (req, res) => {

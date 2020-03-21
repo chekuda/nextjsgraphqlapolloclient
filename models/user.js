@@ -3,8 +3,9 @@ import mongoose from 'mongoose'
 const { Schema } = mongoose
 
 const userSchema = new Schema({
-  name: String,
-  surname: String,
+  userName: String,
+  email: String,
+  password: String,
 })
 
 // This is for defining the model only once
