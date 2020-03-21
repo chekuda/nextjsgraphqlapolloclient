@@ -1,13 +1,13 @@
 import Post from '../../models/post'
 import connectToDb from './middlewares/db'
 
-const handler = async (req, res) => {
+const handler = async () => {
   try {
     let post = await Post.find({})
-    res.send(post)
+    return post
   }
   catch(e) {
-    res.status(500).send(e)
+    return e
   }
 }
 

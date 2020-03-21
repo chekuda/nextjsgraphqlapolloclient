@@ -1,15 +1,30 @@
 import User from '../../models/user'
 import connectToDb from './middlewares/db'
 
-const handler = async (req, res) => {
-  console.log('body', req.body)
+/*
+  Get all users
+*/
+export const getUsers = connectToDb(async () => {
   try {
-    let user = await User.find({})
-    res.send(user)
+    let user = await User.find()
+    return user
   }
   catch(e) {
-    res.status(500).send(e)
+    return e
   }
-}
+})
 
-export default connectToDb(handler)
+/*
+  Get user by Id
+*/
+
+export const getUserById = connectToDb(async ({ id }) => {
+  console.log('id', id)
+  try {
+    let user = await User.findById(id)
+    return user
+  }
+  catch(e) {
+    return e
+  }
+})
