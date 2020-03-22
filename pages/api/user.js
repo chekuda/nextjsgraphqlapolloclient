@@ -29,6 +29,7 @@ export const signUp = connectToDb(async ({
       email,
       password: hashedPassword
     })
+    console.log('user', user)
     return user
   }
   catch(err) {

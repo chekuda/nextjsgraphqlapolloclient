@@ -19,6 +19,7 @@
     "apollo-cache-inmemory": "^1.6.5",
     "axios": "^0.19.2",
     "bcrypt": "^4.0.1",
+    "formik": "^2.1.4",
     "graphql": "^14.6.0",
     "jsxclassnames": "^1.0.2",
     "mongoose": "^5.9.5",
@@ -27,6 +28,7 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "validator": "^12.2.0"
+    "validator": "^12.2.0",
+    "yup": "^0.28.3"
   }
 }

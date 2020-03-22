@@ -39,12 +39,12 @@ const root = {
   getPosts,
   findPostsByUserId,
   signUp,
-  login
+  login,
 }
 
 export default async (req, res) => {
-  const query = req.body.query;
-  const response = await graphql(schema, query, root);
-
+  const { query, variables } = req.body
+  const context = ''
+  const response = await graphql(schema, query, root, context, variables);
   return res.end(JSON.stringify(response));
 };

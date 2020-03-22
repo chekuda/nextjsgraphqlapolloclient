@@ -1,28 +1,32 @@
 import React from 'react'
-import { useQuery } from '@apollo/react-hooks'
-import { gql } from 'apollo-boost'
+import { useMutation, useQuery } from '@apollo/react-hooks'
+import {gql} from 'apollo-boost'
 
-// const USER = gql` {
-//     query getUser($email: String!, $password: String!) {
-//       login(email: $email, password: $password) {
-//         username
-//         password
-//       }
-//     }
-//   }`;
+const ADD_TODO = gql`
+  mutation addTodo($type: String!) {
+    addTodo(type: $type) {
+      id
+      type
+    }
+  }
+`;
 
-// export default () => {
-//   const { loading, error, data } = useQuery(USER , {
-//     variables: 
-//   })
+const TES_QUERY = gql`
+  query($id: ID) {
+    getUserById(id: $id) {
+      userName
+      email
+      password
+    }
+  }
+`
 
-//   if (loading) return <p>Loading...</p>
-//   if (error) return <p>Error :(</p>
-//   console.log(data)
-//   return <div>{data.hello}</div>
-// }
-
-export default () => <div></div>
+export default () => {
+  const { loading, data } = useQuery(TES_QUERY, { variables: { id: '5e7610b277184b481b97d410' }})
+  return <div>
+    <button onClick={() => {}}>Click</button>
+  </div>
+}
 
 
 
