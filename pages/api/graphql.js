@@ -1,3 +1,4 @@
+import jwt from 'jsonwebtoken'
 import { graphql, buildSchema } from 'graphql'
 
 import { getUsers, getUserById, signUp, login } from './user'
@@ -42,11 +43,11 @@ const root = {
   login,
 }
 
+
 export default async (req, res) => {
   const { query, variables } = req.body
-  const context = ''
-  // const response = await graphql(schema, query, root, context, variables);
-  console.log('res', res.header) //Send the auth when signup and set cookie in FE
-  res.send('jose')
-  // return res.cookie({ name: 'josenextjs' }).end(JSON.stringify(response));
+  const context = {}
+  const response = await graphql(schema, query, root, context, variables)
+
+  return res.end(JSON.stringify(response));
 };

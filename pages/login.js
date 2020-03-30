@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
@@ -30,17 +30,11 @@ export default () => {
         </div>
       </div>
       <div className={styles.signup}>
-        <Button
-          className={styles.signupButton}
-          size='large'
-          variant='text'
-        >
-          <Typography align='center' color='primary'>
-            <Link href='/signup'>
-              <a className={styles.link}>Sign Up</a>
-            </Link>
-          </Typography>
-        </Button>
+        <Typography align='center' color='primary'>
+          <Link href='/signup'>
+            <a className={styles.link}>Sign Up</a>
+          </Link>
+        </Typography>
       </div>
     </Paper>
   </div>

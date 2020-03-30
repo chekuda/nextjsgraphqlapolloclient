@@ -154,7 +154,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
 /* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _createApolloClient__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./createApolloClient */ "./lib/createApolloClient.js");
-var _jsxFileName = "/Users/chekuda/Desktop/projects/nextjsgraphqlapolloclient/lib/apollo.js";
+var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/lib/apollo.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -421,7 +421,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCookie", function() { return getCookie; });
 const COOKIENAME = '_quarantine';
 const getCookie = (cookies = '') => {
-  const cookie = (cookies.match(/_quarantine=*.(;$)?/) || [])[0];
+  const cookie = (cookies.match(/_quarantine=*.+(;$)?/) || [])[0];
   return cookie ? cookie.split('=')[1] : null;
 };
 
@@ -2265,7 +2265,6 @@ module.exports = {
 	"buttonBox": "Login_buttonBox__1f_O6",
 	"submit": "Login_submit__16liq",
 	"signup": "Login_signup__3unFk",
-	"signupButton": "Login_signupButton__18msq",
 	"link": "Login_link__2mzCZ"
 };
 
@@ -2302,7 +2301,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.module.css */ "./pages/app.module.css");
 /* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_app_module_css__WEBPACK_IMPORTED_MODULE_12__);
-var _jsxFileName = "/Users/chekuda/Desktop/projects/nextjsgraphqlapolloclient/pages/_app.js";
+var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -2328,11 +2327,11 @@ const MyApp = ({
   pathname
 }) => {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (loggedIn || pathname === '/signup' || pathname === '/login') return;
+    if (loggedIn || !loggedIn && (pathname === '/signup' || pathname === '/login')) return;
     next_router__WEBPACK_IMPORTED_MODULE_7___default.a.replace(pathname, '/login', {
       shallow: true
     });
-  }, [loggedIn]);
+  }, [pathname]);
   return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
     theme: _components_theme_theme__WEBPACK_IMPORTED_MODULE_10__["theme"],
     __source: {
@@ -2465,9 +2464,9 @@ MyApp.getInitialProps = async request => {
     req,
     pathname
   } = request.ctx;
-  const token = Object(_lib_getCookie__WEBPACK_IMPORTED_MODULE_9__["getCookie"])(req.headers.cookie);
+  const token = Object(_lib_getCookie__WEBPACK_IMPORTED_MODULE_9__["getCookie"])(((req || {}).headers || {}).cookie);
   return {
-    loggedIn: !!token || pathname === '/signup' || pathname === '/login',
+    loggedIn: !!token,
     pathname
   };
 };
@@ -2520,7 +2519,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Login.module.css */ "./pages/Login.module.css");
 /* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Login_module_css__WEBPACK_IMPORTED_MODULE_7__);
-var _jsxFileName = "/Users/chekuda/Desktop/projects/nextjsgraphqlapolloclient/pages/login.js";
+var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2610,38 +2609,29 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 32
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.signupButton,
-    size: "large",
-    variant: "text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: undefined
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
     align: "center",
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("a", {
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.link,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 35
     },
     __self: undefined
-  }, "Sign Up")))))));
+  }, "Sign Up"))))));
 });
 
 /***/ }),

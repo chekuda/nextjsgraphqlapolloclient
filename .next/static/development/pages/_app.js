@@ -55,7 +55,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/chekuda/Desktop/projects/nextjsgraphqlapolloclient/lib/apollo.js";
+var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/lib/apollo.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -359,7 +359,7 @@ __webpack_require__.r(__webpack_exports__);
 var COOKIENAME = '_quarantine';
 var getCookie = function getCookie() {
   var cookies = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-  var cookie = (cookies.match(/_quarantine=*.(;$)?/) || [])[0];
+  var cookie = (cookies.match(/_quarantine=*.+(;$)?/) || [])[0];
   return cookie ? cookie.split('=')[1] : null;
 };
 
@@ -22707,7 +22707,7 @@ function toVal(mix) {
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".Login_content__KqV1o {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.Login_paper__1U7GA {\n  display: flex;\n  flex-direction: column;\n  width: 90%;\n  max-width: 400px;\n  padding: 20px;\n}\n.Login_form__3VoDQ {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 30px 0 10px 0;\n}\n.Login_form__3VoDQ > * {\n  width: 90%;\n}\n\n.Login_buttonBox__1f_O6 {\n  margin: 15px;\n}\n\n.Login_submit__16liq{\n  width: 100%;\n}\n\n.Login_signup__3unFk {\n  margin: 0 auto;\n  width: 90%;\n}\n\n.Login_signupButton__18msq {\n  width: 100%;\n}\n\n.Login_link__2mzCZ{\n  text-decoration: none;\n  color: var(--primary-color);\n}\n", "",{"version":3,"sources":["Login.module.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,qBAAqB;EACrB,kBAAkB;EAClB,QAAQ;EACR,2BAA2B;AAC7B;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,UAAU;EACV,gBAAgB;EAChB,aAAa;AACf;AACA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,sBAAsB;AACxB;AACA;EACE,UAAU;AACZ;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,UAAU;AACZ;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,qBAAqB;EACrB,2BAA2B;AAC7B","file":"Login.module.css","sourcesContent":[".content {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.paper {\n  display: flex;\n  flex-direction: column;\n  width: 90%;\n  max-width: 400px;\n  padding: 20px;\n}\n.form {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 30px 0 10px 0;\n}\n.form > * {\n  width: 90%;\n}\n\n.buttonBox {\n  margin: 15px;\n}\n\n.submit{\n  width: 100%;\n}\n\n.signup {\n  margin: 0 auto;\n  width: 90%;\n}\n\n.signupButton {\n  width: 100%;\n}\n\n.link{\n  text-decoration: none;\n  color: var(--primary-color);\n}\n"]}]);
+exports.push([module.i, ".Login_content__KqV1o {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.Login_paper__1U7GA {\n  display: flex;\n  flex-direction: column;\n  width: 90%;\n  max-width: 400px;\n  padding: 20px;\n}\n.Login_form__3VoDQ {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 30px 0 10px 0;\n}\n.Login_form__3VoDQ > * {\n  width: 90%;\n}\n\n.Login_buttonBox__1f_O6 {\n  margin: 15px;\n}\n\n.Login_submit__16liq{\n  width: 100%;\n}\n\n.Login_signup__3unFk {\n  margin: 0 auto;\n  width: 90%;\n}\n\n.Login_link__2mzCZ{\n  text-decoration: none;\n  color: var(--primary-color);\n}\n", "",{"version":3,"sources":["Login.module.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,qBAAqB;EACrB,kBAAkB;EAClB,QAAQ;EACR,2BAA2B;AAC7B;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,UAAU;EACV,gBAAgB;EAChB,aAAa;AACf;AACA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,sBAAsB;AACxB;AACA;EACE,UAAU;AACZ;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,UAAU;AACZ;;AAEA;EACE,qBAAqB;EACrB,2BAA2B;AAC7B","file":"Login.module.css","sourcesContent":[".content {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.paper {\n  display: flex;\n  flex-direction: column;\n  width: 90%;\n  max-width: 400px;\n  padding: 20px;\n}\n.form {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 30px 0 10px 0;\n}\n.form > * {\n  width: 90%;\n}\n\n.buttonBox {\n  margin: 15px;\n}\n\n.submit{\n  width: 100%;\n}\n\n.signup {\n  margin: 0 auto;\n  width: 90%;\n}\n\n.link{\n  text-decoration: none;\n  color: var(--primary-color);\n}\n"]}]);
 // Exports
 exports.locals = {
 	"content": "Login_content__KqV1o",
@@ -22716,7 +22716,6 @@ exports.locals = {
 	"buttonBox": "Login_buttonBox__1f_O6",
 	"submit": "Login_submit__16liq",
 	"signup": "Login_signup__3unFk",
-	"signupButton": "Login_signupButton__18msq",
 	"link": "Login_link__2mzCZ"
 };
 
@@ -39495,7 +39494,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_app_module_css__WEBPACK_IMPORTED_MODULE_14__);
 
 
-var _jsxFileName = "/Users/chekuda/Desktop/projects/nextjsgraphqlapolloclient/pages/_app.js";
+var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -39517,11 +39516,11 @@ var MyApp = function MyApp(_ref) {
       loggedIn = _ref.loggedIn,
       pathname = _ref.pathname;
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
-    if (loggedIn || pathname === '/signup' || pathname === '/login') return;
+    if (loggedIn || !loggedIn && (pathname === '/signup' || pathname === '/login')) return;
     next_router__WEBPACK_IMPORTED_MODULE_9___default.a.replace(pathname, '/login', {
       shallow: true
     });
-  }, [loggedIn]);
+  }, [pathname]);
   return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["ThemeProvider"], {
     theme: _components_theme_theme__WEBPACK_IMPORTED_MODULE_12__["theme"],
     __source: {
@@ -39657,9 +39656,9 @@ MyApp.getInitialProps = function _callee(request) {
       switch (_context.prev = _context.next) {
         case 0:
           _request$ctx = request.ctx, req = _request$ctx.req, pathname = _request$ctx.pathname;
-          token = Object(_lib_getCookie__WEBPACK_IMPORTED_MODULE_11__["getCookie"])(req.headers.cookie);
+          token = Object(_lib_getCookie__WEBPACK_IMPORTED_MODULE_11__["getCookie"])(((req || {}).headers || {}).cookie);
           return _context.abrupt("return", {
-            loggedIn: !!token || pathname === '/signup' || pathname === '/login',
+            loggedIn: !!token,
             pathname: pathname
           });
 
@@ -39758,7 +39757,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
 /* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Login.module.css */ "./pages/Login.module.css");
 /* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Login_module_css__WEBPACK_IMPORTED_MODULE_7__);
-var _jsxFileName = "/Users/chekuda/Desktop/projects/nextjsgraphqlapolloclient/pages/login.js";
+var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -39848,38 +39847,29 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 32
     },
     __self: this
-  }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.signupButton,
-    size: "large",
-    variant: "text",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__["default"], {
     align: "center",
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 33
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 34
     },
     __self: this
   }, __jsx("a", {
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_7___default.a.link,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 35
     },
     __self: this
-  }, "Sign Up")))))));
+  }, "Sign Up"))))));
 });
 
 /***/ }),
@@ -39953,7 +39943,7 @@ if (true) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./");
-module.exports = __webpack_require__(/*! /Users/chekuda/Desktop/projects/nextjsgraphqlapolloclient/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
+module.exports = __webpack_require__(/*! /Users/checa/Desktop/checa/nextjs/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
 
 
 /***/ }),

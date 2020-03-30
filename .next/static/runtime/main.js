@@ -936,7 +936,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/chekuda/Desktop/projects/nextjsgraphqlapolloclient/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/checa/Desktop/checa/nextjs/.next");
       return error;
     }
   };

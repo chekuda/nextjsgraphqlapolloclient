@@ -21,6 +21,7 @@
     "bcrypt": "^4.0.1",
     "formik": "^2.1.4",
     "graphql": "^14.6.0",
+    "jsonwebtoken": "^8.5.1",
     "jsxclassnames": "^1.0.2",
     "mongoose": "^5.9.5",
     "next": "^9.3.0",

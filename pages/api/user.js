@@ -29,7 +29,6 @@ export const signUp = connectToDb(async ({
       email,
       password: hashedPassword
     })
-    console.log('user', user)
     return user
   }
   catch(err) {
@@ -41,7 +40,7 @@ export const signUp = connectToDb(async ({
  * Login
 */
 
-export const login = connectToDb(async ({ email, password }) => {
+export const login = connectToDb(async ({ email, password }, { user }) => {
   try {
     validateEmail(email)
     const user = await User.findOne({ email })

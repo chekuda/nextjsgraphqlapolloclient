@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { withApollo } from '../lib/apollo'
 import { ThemeProvider } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -16,9 +16,9 @@ import styles from './app.module.css'
 
 const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
   useEffect(() => {
-    if (loggedIn || pathname === '/signup' || pathname === '/login') return
+    if (loggedIn || (!loggedIn && (pathname === '/signup' || pathname === '/login'))) return
     Router.replace(pathname, '/login', { shallow: true })
-  }, [loggedIn])
+  }, [pathname])
 
   return (
     <ThemeProvider theme={theme}>
@@ -49,11 +49,11 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
           </Toolbar>
         </AppBar>
         <div className={styles.content}>
-        { 
+        {
           !loggedIn && !(pathname === '/signup' || pathname === '/login')
             ? <LoginPage {...pageProps}/>
             : <Component {...pageProps} />
-        } 
+        }
         </div>
   </ThemeProvider>
   )
@@ -61,10 +61,10 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
 
 MyApp.getInitialProps = async request => {
   const { req, pathname } = request.ctx
-  const token = getCookie(req.headers.cookie)
+  const token = getCookie(((req || {}).headers || {}).cookie)
 
   return {
-    loggedIn: !!token || pathname === '/signup' || pathname === '/login',
+    loggedIn: !!token,
     pathname
   }
 }
