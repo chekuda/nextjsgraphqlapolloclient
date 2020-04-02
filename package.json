@@ -29,6 +29,7 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
     "validator": "^12.2.0",
     "yup": "^0.28.3"
   }

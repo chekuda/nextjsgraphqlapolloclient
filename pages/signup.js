@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Router from 'next/router'
 import { useMutation } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
@@ -13,10 +13,13 @@ import Button from '@material-ui/core/Button'
 import styles from './Login.module.css'
 
 const SIGN_UP = gql`
-  mutation SignUp($userName: String!, $email: String!, $password: String!) {
-    signUp(userName: $userName, email: $email, password: $password) {
-      userName
-      email
+  mutation SignUp($user: UserInput!) {
+    signUp(user: $UserInput) {
+      user {
+        userName
+        email
+      }
+      token
     }
   }
 `;

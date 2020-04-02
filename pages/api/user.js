@@ -1,7 +1,11 @@
-import isEmail from 'validator/lib/isEmail'
 import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
+
+import isEmail from 'validator/lib/isEmail'
 import User from '../../models/user'
 import connectToDb from './middlewares/db'
+
+const JWT_SECRET = 'test'
 
 const validateEmail = email => {
   if(!email || !isEmail(email)) {
@@ -13,9 +17,11 @@ const validateEmail = email => {
  * SignUp
 */
 export const signUp = connectToDb(async ({
-  userName,
-  email,
-  password
+  user: {
+    userName,
+    email,
+    password
+  }
 }) => {
   try {
     validateEmail(email)
@@ -23,13 +29,15 @@ export const signUp = connectToDb(async ({
     if(existingUser.length !== 0) {
       throw new Error('User Already exist')
     }
+    const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1d' })
     const hashedPassword = await bcrypt.hash(password, 10)
     let user = await User.create({
       userName,
       email,
       password: hashedPassword
     })
-    return user
+
+    return { user, token }
   }
   catch(err) {
     return err
@@ -40,7 +48,7 @@ export const signUp = connectToDb(async ({
  * Login
 */
 
-export const login = connectToDb(async ({ email, password }, { user }) => {
+export const login = connectToDb(async ({ email, password }) => {
   try {
     validateEmail(email)
     const user = await User.findOne({ email })
@@ -48,7 +56,8 @@ export const login = connectToDb(async ({ email, password }, { user }) => {
     if(!isValidPassword) {
       throw new Error('Wrong password')
     }
-    return user
+    const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1d' })
+    return { user, token }
   }
   catch(e) {
     return e

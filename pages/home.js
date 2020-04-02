@@ -11,8 +11,8 @@ import data from '../data/posts.json'
 
 import styles from './Home.module.css'
 
-export default () =>
-  data.map(({ img, title, description }, index) => (
+export default () => {
+  return data.map(({ img, title, description }, index) => (
     <Card key={index} className={styles.card}>
       <CardActionArea>
         <CardMedia
@@ -38,3 +38,4 @@ export default () =>
         </Button>
       </CardActions>
     </Card>))
+}

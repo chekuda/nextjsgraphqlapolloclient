@@ -16,20 +16,29 @@ const schema = buildSchema(`
     email: String
     password: String
   }
+  input UserInput {
+    userName: String
+    email: String
+    password: String
+  }
   type Post {
     userId: ID
     title: String
   }
+  type Auth {
+    user: User
+    token: String
+  }
   type Query {
     getUsers: [User]
     getUserById(id: ID): User
-    login(email: String, password: String): User
     getPosts: [Post]
     findPostsByUserId(userId: ID): [Post]
   }
   type Mutation {
+    login(email: String, password: String): Auth
     createPost(userId: ID!, title: String!): Post
-    signUp(userName: String, email: String, password: String): User
+    signUp(user: UserInput): Auth
   }
 `);
 
