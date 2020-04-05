@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Formik, Form } from 'formik'
-import { withRouter } from "react-router-dom"
-import Router from 'next/router'
+import { withRouter } from 'next/router'
 import { useMutation } from '@apollo/react-hooks'
 import * as Yup from 'yup'
 import { gql } from 'apollo-boost'
@@ -34,18 +33,19 @@ const LoginSchema = Yup.object().shape({
     .max(50, 'Too Long!'),
 })
 
-export default () => {
+const Login = ({ router }) => {
   const [login, { data = {}, loading, error }] = useMutation(LOGIN)
   const [isLogged, setIsLogged] = useState(false)
   useEffect(() => {
     if(data.login) {
-      document.cookie = `_quarantine=jose`
+      document.cookie = `_quarantine=${data.login.token}`
       setIsLogged(true)
     }
   }, [data])
 
   if(isLogged) {
-    return Router.push('/home')
+    // TODO: CHECK HOW TO GET THE TOKEN WHEN REDIRECT
+    return router.push('/home')
   }
 
   return <div className={styles.content}>
@@ -102,3 +102,4 @@ export default () => {
   </div>
 }
 
+export default withRouter(Login)

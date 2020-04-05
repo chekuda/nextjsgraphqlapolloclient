@@ -61,8 +61,11 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
 
 MyApp.getInitialProps = async request => {
   const { req, pathname } = request.ctx
+  console.log(('cookie', (req || {}).headers || {}).cookie)
   const token = getCookie(((req || {}).headers || {}).cookie)
-
+  // TODO: HOW TO GET THE COOKIE or AUTH in SSR DONT WAIT FOR CSR
+  // TOD: CANT ACCESS TO REQUEST ON REDIRECT SO NEED TO ACCESS TO APOLLO CACHE
+  return {}
   return {
     loggedIn: !!token,
     pathname

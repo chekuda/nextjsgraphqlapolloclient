@@ -1,9 +1,12 @@
 import Post from '../../models/post'
 import connectToDb from './middlewares/db'
 
-export const createPost = connectToDb(async ({ userId, title }) => {
+export const createPost = connectToDb(async ({ title }, { user }) => {
   try {
-    let post = await Post.create({ userId, title })
+    if(!user) {
+      throw new Error('User not Logged')
+    }
+    let post = await Post.create({ userId: user, title })
     return post
   }
   catch(e) {
@@ -11,9 +14,12 @@ export const createPost = connectToDb(async ({ userId, title }) => {
   }
 })
 
-export const getPosts = connectToDb(async() => {
+export const getPostsById = connectToDb(async(_, { user }) => {
   try {
-    let post = await Post.find({})
+    if(!user) {
+      throw new Error('User not Logged')
+    }
+    let post = await Post.find({ userId: user })
     return post
   }
   catch(e) {
@@ -21,9 +27,12 @@ export const getPosts = connectToDb(async() => {
   }
 })
 
-export const findPostsByUserId = connectToDb(async({ userId }) => {
+export const findPostsByUserId = connectToDb(async({}, { user }) => {
   try {
-    let post = await Post.find({ userId })
+    if(!user) {
+      throw new Error('User not Logged')
+    }
+    let post = await Post.find({ userId: user })
     return post
   }
   catch(e) {

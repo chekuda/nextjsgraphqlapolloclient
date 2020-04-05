@@ -5,7 +5,7 @@ import isEmail from 'validator/lib/isEmail'
 import User from '../../models/user'
 import connectToDb from './middlewares/db'
 
-const JWT_SECRET = 'test'
+export const JWT_SECRET = 'test'
 
 const validateEmail = email => {
   if(!email || !isEmail(email)) {
@@ -29,13 +29,13 @@ export const signUp = connectToDb(async ({
     if(existingUser.length !== 0) {
       throw new Error('User Already exist')
     }
-    const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1d' })
     const hashedPassword = await bcrypt.hash(password, 10)
     let user = await User.create({
       userName,
       email,
       password: hashedPassword
     })
+    const token = jwt.sign({ user: user.id }, JWT_SECRET, { expiresIn: '1d' })
 
     return { user, token }
   }
@@ -56,7 +56,7 @@ export const login = connectToDb(async ({ email, password }) => {
     if(!isValidPassword) {
       throw new Error('Wrong password')
     }
-    const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '1d' })
+    const token = jwt.sign({ user: user.id }, JWT_SECRET, { expiresIn: '1d' })
     return { user, token }
   }
   catch(e) {
@@ -68,7 +68,7 @@ export const login = connectToDb(async ({ email, password }) => {
 /*
   Get all users
 */
-export const getUsers = connectToDb(async () => {
+export const getUsers = connectToDb(async ({}, { user }) => {
   try {
     let user = await User.find()
     return user

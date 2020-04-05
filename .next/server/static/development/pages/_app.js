@@ -2327,14 +2327,15 @@ const MyApp = ({
   pathname
 }) => {
   // useEffect(() => {
-  //   if (loggedIn || (!loggedIn && (pathname === '/signup' || pathname === '/login'))) return
+  //   if (loggedIn || (!loggedIn && (pathname === '/signup' && pathname === '/login'))) return
+  //   console.log('replacing')
   //   Router.replace(pathname, '/login', { shallow: true })
   // }, [pathname])
   return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
     theme: _components_theme_theme__WEBPACK_IMPORTED_MODULE_10__["theme"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2342,122 +2343,128 @@ const MyApp = ({
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: undefined
   }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.header,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: undefined
   }, __jsx("div", {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.menu,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "/home",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: undefined
   }, "Home"))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "/trends",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: undefined
   }, "Trends"))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "/preferidos",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: undefined
   }, "Preferidos")))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "/login",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: undefined
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: undefined
   }, "login"))))), __jsx("div", {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.content,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: undefined
   }, __jsx(Component, _extends({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 56
     },
     __self: undefined
   }))));
-}; // MyApp.getInitialProps = async request => {
-//   const { req, pathname } = request.ctx
-//   const token = getCookie(((req || {}).headers || {}).cookie)
-//   return {
-//     loggedIn: !!token,
-//     pathname
-//   }
-// }
+};
 
+MyApp.getInitialProps = async request => {
+  // const { req, pathname } = request.ctx
+  // console.log(('cookie', (req || {}).headers || {}).cookie)
+  // const token = getCookie(((req || {}).headers || {}).cookie)
+  // console.log('token', token)
+  // if(process.browser) {
+  //   console.log('document ', document ? document.cookie : 'no')
+  // }
+  return {}; // return {
+  //   loggedIn: !!token,
+  //   pathname
+  // }
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_lib_apollo__WEBPACK_IMPORTED_MODULE_1__["withApollo"])({
   ssr: true
@@ -2495,30 +2502,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "formik");
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "react-router-dom");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! yup */ "yup");
-/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Paper */ "@material-ui/core/Paper");
-/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/Divider */ "@material-ui/core/Divider");
-/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Login.module.css */ "./pages/Login.module.css");
-/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_Login_module_css__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! yup */ "yup");
+/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Paper */ "@material-ui/core/Paper");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/Divider */ "@material-ui/core/Divider");
+/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Login.module.css */ "./pages/Login.module.css");
+/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_Login_module_css__WEBPACK_IMPORTED_MODULE_12__);
 var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2541,8 +2546,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-const LOGIN = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
+const LOGIN = apollo_boost__WEBPACK_IMPORTED_MODULE_5__["gql"]`
   mutation Login($email: String!, $password: String!) {
     login( email: $email, password: $password) {
       user {
@@ -2553,62 +2557,62 @@ const LOGIN = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
     }
   }
 `;
-const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
-  email: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().email('Invalid email'),
-  password: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().min(6, 'Too Short!').max(50, 'Too Long!')
+const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_4__["object"]().shape({
+  email: yup__WEBPACK_IMPORTED_MODULE_4__["string"]().email('Invalid email'),
+  password: yup__WEBPACK_IMPORTED_MODULE_4__["string"]().min(6, 'Too Short!').max(50, 'Too Long!')
 });
-/* harmony default export */ __webpack_exports__["default"] = (() => {
+
+const Login = ({
+  router
+}) => {
   const [login, {
     data = {},
     loading,
     error
-  }] = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useMutation"])(LOGIN);
+  }] = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__["useMutation"])(LOGIN);
   const {
     0: isLogged,
     1: setIsLogged
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     if (data.login) {
-      console.log('data', data);
-      console.log('loading', loading);
-      console.log('error', error);
-      document.cookie = `_quarantine=jose`;
+      document.cookie = `_quarantine=${data.login.token}`;
       setIsLogged(true);
     }
   }, [data]);
 
   if (isLogged) {
-    return next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/home');
+    return router.push('/home');
   }
 
   return __jsx("div", {
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.content,
+    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.content,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 50
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default.a, {
+  }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7___default.a, {
     elevation: 3,
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.paper,
+    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.paper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 51
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default.a, {
     align: "center",
     variant: "h2",
     gutterBottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 52
     },
     __self: undefined
-  }, "Login"), __jsx(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11___default.a, {
+  }, "Login"), __jsx(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 55
     },
     __self: undefined
   }), __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Formik"], {
@@ -2625,7 +2629,7 @@ const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 57
     },
     __self: undefined
   }, ({
@@ -2639,13 +2643,13 @@ const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
   }) => {
     return __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Form"], {
       onSubmit: handleSubmit,
-      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.form,
+      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.form,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 74
       },
       __self: undefined
-    }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
+    }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default.a, {
       id: "email",
       label: "Email",
       type: "email",
@@ -2658,10 +2662,10 @@ const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 75
       },
       __self: undefined
-    }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
+    }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default.a, {
       id: "password",
       label: "Password",
       type: "password",
@@ -2674,18 +2678,18 @@ const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 76
       },
       __self: undefined
     }), __jsx("div", {
-      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.buttonBox,
+      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.buttonBox,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 77
       },
       __self: undefined
-    }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12___default.a, {
-      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.submit,
+    }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11___default.a, {
+      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.submit,
       color: "primary",
       size: "large",
       variant: "contained",
@@ -2693,41 +2697,43 @@ const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
       disabled: isSubmitting && !error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 78
       },
       __self: undefined
     }, "Login")));
   }), __jsx("div", {
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.signup,
+    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.signup,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 93
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9___default.a, {
+  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default.a, {
     align: "center",
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 94
     },
     __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 95
     },
     __self: undefined
   }, __jsx("a", {
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.link,
+    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.link,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 96
     },
     __self: undefined
   }, "Sign Up"))))));
-});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Login));
 
 /***/ }),
 
@@ -2993,17 +2999,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
-
-/***/ }),
-
-/***/ "react-router-dom":
-/*!***********************************!*\
-  !*** external "react-router-dom" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-router-dom");
 
 /***/ }),
 

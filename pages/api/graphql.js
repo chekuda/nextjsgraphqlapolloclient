@@ -1,8 +1,9 @@
 import jwt from 'jsonwebtoken'
 import { graphql, buildSchema } from 'graphql'
 
-import { getUsers, getUserById, signUp, login } from './user'
-import { createPost, getPosts, findPostsByUserId } from './post'
+import { getCookie } from '../../lib/getCookie'
+import { getUsers, getUserById, signUp, login, JWT_SECRET } from './user'
+import { createPost, getPostsById, findPostsByUserId } from './post'
 
 /*
   buildSchema allows us to define (using GraphQL - the query language itself)
@@ -12,6 +13,7 @@ import { createPost, getPosts, findPostsByUserId } from './post'
 
 const schema = buildSchema(`
   type User {
+    id: ID,
     userName: String
     email: String
     password: String
@@ -32,12 +34,12 @@ const schema = buildSchema(`
   type Query {
     getUsers: [User]
     getUserById(id: ID): User
-    getPosts: [Post]
+    getPostsById: [Post]
     findPostsByUserId(userId: ID): [Post]
   }
   type Mutation {
     login(email: String, password: String): Auth
-    createPost(userId: ID!, title: String!): Post
+    createPost(title: String!): Post
     signUp(user: UserInput): Auth
   }
 `);
@@ -46,7 +48,7 @@ const root = {
   getUsers,
   getUserById,
   createPost,
-  getPosts,
+  getPostsById,
   findPostsByUserId,
   signUp,
   login,
@@ -55,7 +57,14 @@ const root = {
 
 export default async (req, res) => {
   const { query, variables } = req.body
-  const context = {}
+  const token = getCookie(req.headers.cookie)
+  let context = {}
+  try {
+    context = jwt.verify(token, JWT_SECRET)
+  }
+  catch(e) {
+    console.log(`Token unfdefined or expired ==> ${e.message}`)
+  }
   const response = await graphql(schema, query, root, context, variables)
 
   return res.end(JSON.stringify(response));
