@@ -1,11 +1,9 @@
 import bcrypt from 'bcrypt'
-import jwt from 'jsonwebtoken'
 
+import { createToken } from '../../lib'
 import isEmail from 'validator/lib/isEmail'
 import User from '../../models/user'
 import connectToDb from './middlewares/db'
-
-export const JWT_SECRET = 'test'
 
 const validateEmail = email => {
   if(!email || !isEmail(email)) {
@@ -35,7 +33,7 @@ export const signUp = connectToDb(async ({
       email,
       password: hashedPassword
     })
-    const token = jwt.sign({ user: user.id }, JWT_SECRET, { expiresIn: '1d' })
+    const token = createToken(user.id)
 
     return { user, token }
   }
@@ -56,7 +54,7 @@ export const login = connectToDb(async ({ email, password }) => {
     if(!isValidPassword) {
       throw new Error('Wrong password')
     }
-    const token = jwt.sign({ user: user.id }, JWT_SECRET, { expiresIn: '1d' })
+    const token = createToken(user.id)
     return { user, token }
   }
   catch(e) {

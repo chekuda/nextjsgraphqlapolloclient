@@ -1,8 +1,7 @@
-import jwt from 'jsonwebtoken'
 import { graphql, buildSchema } from 'graphql'
+import { verifyToken, getCookie } from '../../lib'
 
-import { getCookie } from '../../lib/getCookie'
-import { getUsers, getUserById, signUp, login, JWT_SECRET } from './user'
+import { getUsers, getUserById, signUp, login } from './user'
 import { createPost, getPostsById, findPostsByUserId } from './post'
 
 /*
@@ -58,13 +57,8 @@ const root = {
 export default async (req, res) => {
   const { query, variables } = req.body
   const token = getCookie(req.headers.cookie)
-  let context = {}
-  try {
-    context = jwt.verify(token, JWT_SECRET)
-  }
-  catch(e) {
-    console.log(`Token unfdefined or expired ==> ${e.message}`)
-  }
+  const context = verifyToken(token) || {}
+
   const response = await graphql(schema, query, root, context, variables)
 
   return res.end(JSON.stringify(response));

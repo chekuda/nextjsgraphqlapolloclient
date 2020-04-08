@@ -44,7 +44,6 @@ const Login = ({ router }) => {
   }, [data])
 
   if(isLogged) {
-    // TODO: CHECK HOW TO GET THE TOKEN WHEN REDIRECT
     return router.push('/home')
   }
 

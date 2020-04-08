@@ -427,6 +427,63 @@ const getCookie = (cookies = '') => {
 
 /***/ }),
 
+/***/ "./lib/index.js":
+/*!**********************!*\
+  !*** ./lib/index.js ***!
+  \**********************/
+/*! exports provided: verifyToken, createToken, getCookie, withApollo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _jwthelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./jwthelper */ "./lib/jwthelper.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "verifyToken", function() { return _jwthelper__WEBPACK_IMPORTED_MODULE_0__["verifyToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createToken", function() { return _jwthelper__WEBPACK_IMPORTED_MODULE_0__["createToken"]; });
+
+/* harmony import */ var _getCookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getCookie */ "./lib/getCookie.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getCookie", function() { return _getCookie__WEBPACK_IMPORTED_MODULE_1__["getCookie"]; });
+
+/* harmony import */ var _apollo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./apollo */ "./lib/apollo.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withApollo", function() { return _apollo__WEBPACK_IMPORTED_MODULE_2__["withApollo"]; });
+
+
+
+
+
+/***/ }),
+
+/***/ "./lib/jwthelper.js":
+/*!**************************!*\
+  !*** ./lib/jwthelper.js ***!
+  \**************************/
+/*! exports provided: verifyToken, createToken */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "verifyToken", function() { return verifyToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createToken", function() { return createToken; });
+/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jsonwebtoken */ "jsonwebtoken");
+/* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_0__);
+
+const JWT_SECRET = 'test';
+const verifyToken = token => {
+  try {
+    return jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default.a.verify(token, JWT_SECRET);
+  } catch (e) {
+    console.log('Couldnt authentificate because of ', e);
+    return false;
+  }
+};
+const createToken = id => jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default.a.sign({
+  user: id
+}, JWT_SECRET, {
+  expiresIn: '1d'
+});
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
@@ -2281,31 +2338,29 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _lib_apollo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lib/apollo */ "./lib/apollo.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/AppBar */ "@material-ui/core/AppBar");
-/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Toolbar */ "@material-ui/core/Toolbar");
-/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./login */ "./pages/login.js");
-/* harmony import */ var _lib_getCookie__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib/getCookie */ "./lib/getCookie.js");
-/* harmony import */ var _components_theme_theme__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/theme/theme */ "./components/theme/theme.js");
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.module.css */ "./pages/app.module.css");
-/* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_app_module_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/AppBar */ "@material-ui/core/AppBar");
+/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Toolbar */ "@material-ui/core/Toolbar");
+/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib */ "./lib/index.js");
+/* harmony import */ var _components_theme_theme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/theme/theme */ "./components/theme/theme.js");
+/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login */ "./pages/login.js");
+/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
+/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.module.css */ "./pages/app.module.css");
+/* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_app_module_css__WEBPACK_IMPORTED_MODULE_11__);
 var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 
 
 
@@ -2326,147 +2381,155 @@ const MyApp = ({
   loggedIn,
   pathname
 }) => {
-  // useEffect(() => {
-  //   if (loggedIn || (!loggedIn && (pathname === '/signup' && pathname === '/login'))) return
-  //   console.log('replacing')
-  //   Router.replace(pathname, '/login', { shallow: true })
-  // }, [pathname])
-  return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
-    theme: _components_theme_theme__WEBPACK_IMPORTED_MODULE_10__["theme"],
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (loggedIn || !loggedIn && (pathname === '/signup' || pathname === '/login')) return;
+    next_router__WEBPACK_IMPORTED_MODULE_6___default.a.replace(pathname, '/login', {
+      shallow: true
+    });
+  }, [pathname]);
+  return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
+    theme: _components_theme_theme__WEBPACK_IMPORTED_MODULE_8__["theme"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    position: "fixed",
+    color: "primary",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    className: _app_module_css__WEBPACK_IMPORTED_MODULE_11___default.a.header,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: undefined
-  }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    position: "fixed",
-    color: "primary",
+  }, __jsx("div", {
+    className: _app_module_css__WEBPACK_IMPORTED_MODULE_11___default.a.menu,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
-  }, __jsx("div", {
-    className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.menu,
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    href: "/home",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    href: "/home",
+  }, "Home"))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    href: "/trends",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
     },
     __self: undefined
   }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: undefined
-  }, "Home"))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    href: "/trends",
+  }, "Trends"))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    href: "/preferidos",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
     },
     __self: undefined
   }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  }, "Trends"))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
     },
     __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    href: "/preferidos",
+  }, "Preferidos")))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    href: "/login",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
     },
     __self: undefined
   }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: undefined
-  }, "Preferidos")))), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
     },
     __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    href: "/login",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: undefined
   }, "login"))))), __jsx("div", {
-    className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.content,
+    className: _app_module_css__WEBPACK_IMPORTED_MODULE_11___default.a.content,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 50
     },
     __self: undefined
-  }, __jsx(Component, _extends({}, pageProps, {
+  }, !loggedIn && !(pathname === '/signup' || pathname === '/login') ? __jsx(_login__WEBPACK_IMPORTED_MODULE_9__["default"], _extends({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 53
+    },
+    __self: undefined
+  })) : __jsx(Component, _extends({}, pageProps, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
     },
     __self: undefined
   }))));
 };
 
-MyApp.getInitialProps = async request => {
-  // const { req, pathname } = request.ctx
-  // console.log(('cookie', (req || {}).headers || {}).cookie)
-  // const token = getCookie(((req || {}).headers || {}).cookie)
-  // console.log('token', token)
-  // if(process.browser) {
-  //   console.log('document ', document ? document.cookie : 'no')
-  // }
-  return {}; // return {
-  //   loggedIn: !!token,
-  //   pathname
-  // }
+MyApp.getInitialProps = async ({
+  ctx
+}) => {
+  const {
+    req,
+    pathname
+  } = ctx;
+  const token = req ? Object(_lib__WEBPACK_IMPORTED_MODULE_7__["getCookie"])(req.headers.cookie) : Object(_lib__WEBPACK_IMPORTED_MODULE_7__["getCookie"])(document.cookie);
+  let loggedIn = Object(_lib__WEBPACK_IMPORTED_MODULE_7__["verifyToken"])(token);
+  return {
+    loggedIn: !!loggedIn,
+    pathname
+  };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_lib_apollo__WEBPACK_IMPORTED_MODULE_1__["withApollo"])({
+/* harmony default export */ __webpack_exports__["default"] = (Object(_lib__WEBPACK_IMPORTED_MODULE_7__["withApollo"])({
   ssr: true
 })(MyApp));
 
@@ -2922,6 +2985,17 @@ module.exports = require("apollo-cache-inmemory");
 /***/ (function(module, exports) {
 
 module.exports = require("formik");
+
+/***/ }),
+
+/***/ "jsonwebtoken":
+/*!*******************************!*\
+  !*** external "jsonwebtoken" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("jsonwebtoken");
 
 /***/ }),
 

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { withApollo } from '../lib/apollo'
+
+import React, { useEffect } from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -7,9 +7,9 @@ import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
 import Router from 'next/router'
 
-import LoginPage from './login'
-import { getCookie } from '../lib/getCookie'
+import { withApollo, verifyToken, getCookie } from '../lib'
 import { theme } from '../components/theme/theme'
+import LoginPage from './login'
 
 import '../styles/global.css'
 import styles from './app.module.css'
@@ -19,7 +19,6 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
     if (loggedIn || (!loggedIn && (pathname === '/signup' || pathname === '/login'))) return
     Router.replace(pathname, '/login', { shallow: true })
   }, [pathname])
-
   return (
     <ThemeProvider theme={theme}>
         <AppBar position="fixed" color="primary">
@@ -59,15 +58,16 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
   )
 }
 
-MyApp.getInitialProps = async request => {
-  const { req, pathname } = request.ctx
-  console.log(('cookie', (req || {}).headers || {}).cookie)
-  const token = getCookie(((req || {}).headers || {}).cookie)
-  // TODO: HOW TO GET THE COOKIE or AUTH in SSR DONT WAIT FOR CSR
-  // TOD: CANT ACCESS TO REQUEST ON REDIRECT SO NEED TO ACCESS TO APOLLO CACHE
-  return {}
+MyApp.getInitialProps = async ({ ctx }) => {
+  const { req, pathname } = ctx
+  const token = req
+    ? getCookie(req.headers.cookie)
+    : getCookie(document.cookie)
+
+  let loggedIn = verifyToken(token)
+
   return {
-    loggedIn: !!token,
+    loggedIn: !!loggedIn,
     pathname
   }
 }
