@@ -72,8 +72,8 @@ const Login = ({ router }) => {
             isSubmitting,
           }) => {
            return <Form onSubmit={handleSubmit} className={styles.form}>
-              <TextField id="email" label="Email" type='email' margin='normal' value={values.email} onChange={handleChange} onBlur={handleBlur} error={errors.email && touched.email && errors.email} helperText={errors.email} required/>
-              <TextField id="password" label="Password" type='password' margin='normal' value={values.password} onChange={handleChange} onBlur={handleBlur} error={errors.password && touched.password && errors.password} helperText={errors.password} required/>
+              <TextField id="email" label="Email" type='email' margin='normal' value={values.email} onChange={handleChange} onBlur={handleBlur} error={errors.email && touched.email && !!errors.email} helperText={errors.email} required/>
+              <TextField id="password" label="Password" type='password' margin='normal' value={values.password} onChange={handleChange} onBlur={handleBlur} error={errors.password && touched.password && !!errors.password} helperText={errors.password} required/>
               <div className={styles.buttonBox}>
                 <Button
                   className={styles.submit}

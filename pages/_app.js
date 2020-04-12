@@ -10,7 +10,7 @@ import Router from 'next/router'
 import { withApollo, verifyToken, getCookie } from '../lib'
 import { theme } from '../lib/theme/theme'
 import LoginPage from './login'
-
+import UserHeader from '../components/UserHeader'
 import '../styles/global.css'
 import styles from './app.module.css'
 
@@ -36,11 +36,7 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
                   </Typography>)
               }
             </div>
-            <Typography>
-              <Link href="/login">
-                <a title='login'>login</a>
-              </Link>
-            </Typography>
+            <UserHeader loggedIn={loggedIn}/>
           </Toolbar>
         </AppBar>
         <div className={styles.content}>
