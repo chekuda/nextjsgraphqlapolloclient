@@ -523,7 +523,7 @@ function createApolloClient(initialState, ctx) {
   // The `ctx` (NextPageContext) will only be present on the server.
   // use it to extract auth headers (ctx.req) or similar.
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_0__["default"]({
-    uri: 'http://localhost:3000/api/graphql',
+    uri: "http://localhost:3000/api/graphql",
     fetch: node_fetch__WEBPACK_IMPORTED_MODULE_2___default.a,
     cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]().restore(initialState) // For keeo the state on CSR after SSR
 
@@ -543,10 +543,11 @@ function createApolloClient(initialState, ctx) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COOKIENAME", function() { return COOKIENAME; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCookie", function() { return getCookie; });
-var COOKIENAME = '_quarantine';
+var COOKIENAME = "_quarantine";
+var myMatch = new RegExp("".concat(COOKIENAME, "=*.+(;$)?"), 'g');
 var getCookie = function getCookie() {
   var cookies = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-  var cookie = (cookies.match(/_quarantine=*.+(;$)?/) || [])[0];
+  var cookie = (cookies.match(myMatch) || [])[0];
   return cookie ? cookie.split('=')[1] : null;
 };
 
@@ -592,7 +593,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jsonwebtoken */ "./node_modules/jsonwebtoken/index.js");
 /* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_0__);
 
-var JWT_SECRET = 'test';
+var JWT_SECRET = "test";
 var verifyToken = function verifyToken(token) {
   try {
     return jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default.a.verify(token, JWT_SECRET);
@@ -83872,7 +83873,7 @@ var Login = function Login(_ref) {
   }, [data]);
 
   if (isLogged) {
-    return router.push('/home');
+    router.push('/home');
   }
 
   return __jsx("div", {

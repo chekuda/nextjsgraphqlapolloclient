@@ -6,7 +6,7 @@ const connectDb = handler => async (req, res) => {
   if (mongoose.connections[0].readyState) return handler(req, res);
   // Using new database connection
   console.log('Connecting to db')
-  await mongoose.connect('mongodb://127.0.0.1:27017/quarentine', {
+  await mongoose.connect(process.env.mongodbUrl, {
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,

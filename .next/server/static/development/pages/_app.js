@@ -541,7 +541,7 @@ function createApolloClient(initialState, ctx) {
   // The `ctx` (NextPageContext) will only be present on the server.
   // use it to extract auth headers (ctx.req) or similar.
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_0___default.a({
-    uri: 'http://localhost:3000/api/graphql',
+    uri: "http://localhost:3000/api/graphql",
     fetch: (node_fetch__WEBPACK_IMPORTED_MODULE_2___default()),
     cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]().restore(initialState) // For keeo the state on CSR after SSR
 
@@ -561,9 +561,10 @@ function createApolloClient(initialState, ctx) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COOKIENAME", function() { return COOKIENAME; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCookie", function() { return getCookie; });
-const COOKIENAME = '_quarantine';
+const COOKIENAME = "_quarantine";
+const myMatch = new RegExp(`${COOKIENAME}=*.+(;$)?`, 'g');
 const getCookie = (cookies = '') => {
-  const cookie = (cookies.match(/_quarantine=*.+(;$)?/) || [])[0];
+  const cookie = (cookies.match(myMatch) || [])[0];
   return cookie ? cookie.split('=')[1] : null;
 };
 
@@ -609,7 +610,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jsonwebtoken */ "jsonwebtoken");
 /* harmony import */ var jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jsonwebtoken__WEBPACK_IMPORTED_MODULE_0__);
 
-const JWT_SECRET = 'test';
+const JWT_SECRET = "test";
 const verifyToken = token => {
   try {
     return jsonwebtoken__WEBPACK_IMPORTED_MODULE_0___default.a.verify(token, JWT_SECRET);
@@ -2768,7 +2769,7 @@ const Login = ({
   }, [data]);
 
   if (isLogged) {
-    return router.push('/home');
+    router.push('/home');
   }
 
   return __jsx("div", {

@@ -44,7 +44,7 @@ const Login = ({ router }) => {
   }, [data])
 
   if(isLogged) {
-    return router.push('/home')
+    router.push('/home')
   }
 
   return <div className={styles.content}>
