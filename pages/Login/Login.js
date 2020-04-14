@@ -33,7 +33,7 @@ const LoginSchema = Yup.object().shape({
     .max(50, 'Too Long!'),
 })
 
-const Login = ({ router }) => {
+const LoginUI = ({ router }) => {
   const [login, { data = {}, loading, error }] = useMutation(LOGIN)
   const [isLogged, setIsLogged] = useState(false)
   useEffect(() => {
@@ -101,4 +101,4 @@ const Login = ({ router }) => {
   </div>
 }
 
-export default withRouter(Login)
+export const Login = withRouter(LoginUI)

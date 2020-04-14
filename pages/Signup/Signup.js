@@ -10,7 +10,7 @@ import TextField from '@material-ui/core/TextField'
 import Divider from '@material-ui/core/Divider'
 import Button from '@material-ui/core/Button'
 
-import styles from './Login.module.css'
+import styles from './Signup.module.css'
 
 const SIGN_UP = gql`
   mutation SignUp($user: UserInput!) {
@@ -41,7 +41,7 @@ const SignupSchema = Yup.object().shape({
     }),
 })
 
-export default () => {
+export const Signup = () => {
   const [signUp, { data, loading, error }] = useMutation(SIGN_UP)
   return <div className={styles.content}>
     <Paper elevation={3} className={styles.paper}>

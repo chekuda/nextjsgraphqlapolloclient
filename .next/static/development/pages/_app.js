@@ -33432,29 +33432,6 @@ exports.locals = {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/Login.module.css":
-/*!********************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!./node_modules/postcss-loader/src??__nextjs_postcss!./pages/Login.module.css ***!
-  \********************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
-// Module
-exports.push([module.i, ".Login_content__KqV1o {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.Login_paper__1U7GA {\n  display: flex;\n  flex-direction: column;\n  width: 90%;\n  max-width: 400px;\n  padding: 20px;\n}\n.Login_form__3VoDQ {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 30px 0 10px 0;\n}\n.Login_form__3VoDQ > * {\n  width: 90%;\n}\n\n.Login_buttonBox__1f_O6 {\n  margin: 15px;\n}\n\n.Login_submit__16liq{\n  width: 100%;\n}\n\n.Login_signup__3unFk {\n  margin: 0 auto;\n  width: 90%;\n}\n\n.Login_link__2mzCZ{\n  text-decoration: none;\n  color: var(--primary-color);\n}\n", "",{"version":3,"sources":["Login.module.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,qBAAqB;EACrB,kBAAkB;EAClB,QAAQ;EACR,2BAA2B;AAC7B;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,UAAU;EACV,gBAAgB;EAChB,aAAa;AACf;AACA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,sBAAsB;AACxB;AACA;EACE,UAAU;AACZ;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,UAAU;AACZ;;AAEA;EACE,qBAAqB;EACrB,2BAA2B;AAC7B","file":"Login.module.css","sourcesContent":[".content {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.paper {\n  display: flex;\n  flex-direction: column;\n  width: 90%;\n  max-width: 400px;\n  padding: 20px;\n}\n.form {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 30px 0 10px 0;\n}\n.form > * {\n  width: 90%;\n}\n\n.buttonBox {\n  margin: 15px;\n}\n\n.submit{\n  width: 100%;\n}\n\n.signup {\n  margin: 0 auto;\n  width: 90%;\n}\n\n.link{\n  text-decoration: none;\n  color: var(--primary-color);\n}\n"]}]);
-// Exports
-exports.locals = {
-	"content": "Login_content__KqV1o",
-	"paper": "Login_paper__1U7GA",
-	"form": "Login_form__3VoDQ",
-	"buttonBox": "Login_buttonBox__1f_O6",
-	"submit": "Login_submit__16liq",
-	"signup": "Login_signup__3unFk",
-	"link": "Login_link__2mzCZ"
-};
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/app.module.css":
 /*!******************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!./node_modules/postcss-loader/src??__nextjs_postcss!./pages/app.module.css ***!
@@ -33471,6 +33448,29 @@ exports.locals = {
 	"menu": "app_menu__20LvS",
 	"button": "app_button__2YfSE",
 	"content": "app_content__1SQ4Q"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/login/Login.module.css":
+/*!**************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!./node_modules/postcss-loader/src??__nextjs_postcss!./pages/login/Login.module.css ***!
+  \**************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, ".Login_content__7NETF {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.Login_paper__23SyK {\n  display: flex;\n  flex-direction: column;\n  width: 90%;\n  max-width: 400px;\n  padding: 20px;\n}\n.Login_form__1NHaK {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 30px 0 10px 0;\n}\n.Login_form__1NHaK > * {\n  width: 90%;\n}\n\n.Login_buttonBox__3ohVm {\n  margin: 15px;\n}\n\n.Login_submit__2dN41{\n  width: 100%;\n}\n\n.Login_signup__2zNDK {\n  margin: 0 auto;\n  width: 90%;\n}\n\n.Login_link__2aZSc{\n  text-decoration: none;\n  color: var(--primary-color);\n}\n", "",{"version":3,"sources":["Login.module.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,qBAAqB;EACrB,kBAAkB;EAClB,QAAQ;EACR,2BAA2B;AAC7B;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,UAAU;EACV,gBAAgB;EAChB,aAAa;AACf;AACA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,mBAAmB;EACnB,sBAAsB;AACxB;AACA;EACE,UAAU;AACZ;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;EACd,UAAU;AACZ;;AAEA;EACE,qBAAqB;EACrB,2BAA2B;AAC7B","file":"Login.module.css","sourcesContent":[".content {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.paper {\n  display: flex;\n  flex-direction: column;\n  width: 90%;\n  max-width: 400px;\n  padding: 20px;\n}\n.form {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  padding: 30px 0 10px 0;\n}\n.form > * {\n  width: 90%;\n}\n\n.buttonBox {\n  margin: 15px;\n}\n\n.submit{\n  width: 100%;\n}\n\n.signup {\n  margin: 0 auto;\n  width: 90%;\n}\n\n.link{\n  text-decoration: none;\n  color: var(--primary-color);\n}\n"]}]);
+// Exports
+exports.locals = {
+	"content": "Login_content__7NETF",
+	"paper": "Login_paper__23SyK",
+	"form": "Login_form__1NHaK",
+	"buttonBox": "Login_buttonBox__3ohVm",
+	"submit": "Login_submit__2dN41",
+	"signup": "Login_signup__2zNDK",
+	"link": "Login_link__2aZSc"
 };
 
 /***/ }),
@@ -83491,67 +83491,6 @@ if (hasSymbols()) {
 
 /***/ }),
 
-/***/ "./pages/Login.module.css":
-/*!********************************!*\
-  !*** ./pages/Login.module.css ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!../node_modules/postcss-loader/src??__nextjs_postcss!./Login.module.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/Login.module.css");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = function(element){// These elements should always exist. If they do not,
-// this code should fail.
-var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
-// Each style tag should be placed right before our
-// anchor. By inserting before and not after, we do not
-// need to track the last inserted element.
-parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
-//
-// After styles are injected, we need to remove the
-// <style> tags that set `body { display: none; }`.
-//
-// We use `requestAnimationFrame` as a way to defer
-// this operation since there may be multiple style
-// tags.
-;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-if (true) {
-  if (!content.locals) {
-    module.hot.accept(
-      /*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!../node_modules/postcss-loader/src??__nextjs_postcss!./Login.module.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/Login.module.css",
-      function () {
-        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!../node_modules/postcss-loader/src??__nextjs_postcss!./Login.module.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/Login.module.css");
-
-        if (typeof newContent === 'string') {
-          newContent = [[module.i, newContent, '']];
-        }
-        
-        update(newContent);
-      }
-    )
-  }
-
-  module.hot.dispose(function() { 
-    update();
-  });
-}
-
-/***/ }),
-
 /***/ "./pages/_app.js":
 /*!***********************!*\
   !*** ./pages/_app.js ***!
@@ -83576,7 +83515,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib */ "./lib/index.js");
 /* harmony import */ var _lib_theme_theme__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../lib/theme/theme */ "./lib/theme/theme.js");
-/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./login */ "./pages/login.js");
+/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./login */ "./pages/login/index.js");
 /* harmony import */ var _components_UserHeader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/UserHeader */ "./components/UserHeader/index.js");
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_13__);
@@ -83781,15 +83720,16 @@ if (true) {
 
 /***/ }),
 
-/***/ "./pages/login.js":
-/*!************************!*\
-  !*** ./pages/login.js ***!
-  \************************/
-/*! exports provided: default */
+/***/ "./pages/login/Login.js":
+/*!******************************!*\
+  !*** ./pages/login/Login.js ***!
+  \******************************/
+/*! exports provided: Login */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
 /* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
@@ -83808,12 +83748,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
 /* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/Divider */ "./node_modules/@material-ui/core/esm/Divider/index.js");
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
-/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Login.module.css */ "./pages/Login.module.css");
+/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Login.module.css */ "./pages/login/Login.module.css");
 /* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_Login_module_css__WEBPACK_IMPORTED_MODULE_15__);
 
 
 
-var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login.js";
+var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login/Login.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -83849,7 +83789,7 @@ var LoginSchema = yup__WEBPACK_IMPORTED_MODULE_7__["object"]().shape({
   password: yup__WEBPACK_IMPORTED_MODULE_7__["string"]().min(6, 'Too Short!').max(50, 'Too Long!')
 });
 
-var Login = function Login(_ref) {
+var LoginUI = function LoginUI(_ref) {
   var router = _ref.router;
 
   var _useMutation = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_6__["useMutation"])(LOGIN),
@@ -84023,7 +83963,84 @@ var Login = function Login(_ref) {
   }, "Sign Up"))))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_5__["withRouter"])(Login));
+var Login = Object(next_router__WEBPACK_IMPORTED_MODULE_5__["withRouter"])(LoginUI);
+
+/***/ }),
+
+/***/ "./pages/login/Login.module.css":
+/*!**************************************!*\
+  !*** ./pages/login/Login.module.css ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!../../node_modules/postcss-loader/src??__nextjs_postcss!./Login.module.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/login/Login.module.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = function(element){// These elements should always exist. If they do not,
+// this code should fail.
+var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
+// Each style tag should be placed right before our
+// anchor. By inserting before and not after, we do not
+// need to track the last inserted element.
+parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
+//
+// After styles are injected, we need to remove the
+// <style> tags that set `body { display: none; }`.
+//
+// We use `requestAnimationFrame` as a way to defer
+// this operation since there may be multiple style
+// tags.
+;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!../../node_modules/postcss-loader/src??__nextjs_postcss!./Login.module.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/login/Login.module.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-2-1!../../node_modules/postcss-loader/src??__nextjs_postcss!./Login.module.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./pages/login/Login.module.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./pages/login/index.js":
+/*!******************************!*\
+  !*** ./pages/login/index.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Login */ "./pages/login/Login.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Login__WEBPACK_IMPORTED_MODULE_0__["Login"]; });
+
+
 
 /***/ }),
 

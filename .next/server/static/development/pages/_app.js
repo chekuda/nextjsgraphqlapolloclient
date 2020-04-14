@@ -2478,26 +2478,6 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/Login.module.css":
-/*!********************************!*\
-  !*** ./pages/Login.module.css ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// Exports
-module.exports = {
-	"content": "Login_content__KqV1o",
-	"paper": "Login_paper__1U7GA",
-	"form": "Login_form__3VoDQ",
-	"buttonBox": "Login_buttonBox__1f_O6",
-	"submit": "Login_submit__16liq",
-	"signup": "Login_signup__3unFk",
-	"link": "Login_link__2mzCZ"
-};
-
-/***/ }),
-
 /***/ "./pages/_app.js":
 /*!***********************!*\
   !*** ./pages/_app.js ***!
@@ -2523,7 +2503,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib */ "./lib/index.js");
 /* harmony import */ var _lib_theme_theme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/theme/theme */ "./lib/theme/theme.js");
-/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login */ "./pages/login.js");
+/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login */ "./pages/login/index.js");
 /* harmony import */ var _components_UserHeader__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/UserHeader */ "./components/UserHeader/index.js");
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_11__);
@@ -2676,15 +2656,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./pages/login.js":
-/*!************************!*\
-  !*** ./pages/login.js ***!
-  \************************/
-/*! exports provided: default */
+/***/ "./pages/login/Login.js":
+/*!******************************!*\
+  !*** ./pages/login/Login.js ***!
+  \******************************/
+/*! exports provided: Login */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "formik");
@@ -2709,9 +2690,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Login.module.css */ "./pages/Login.module.css");
+/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Login.module.css */ "./pages/login/Login.module.css");
 /* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_Login_module_css__WEBPACK_IMPORTED_MODULE_12__);
-var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login.js";
+var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login/Login.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -2749,7 +2730,7 @@ const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_4__["object"]().shape({
   password: yup__WEBPACK_IMPORTED_MODULE_4__["string"]().min(6, 'Too Short!').max(50, 'Too Long!')
 });
 
-const Login = ({
+const LoginUI = ({
   router
 }) => {
   const [login, {
@@ -2920,7 +2901,43 @@ const Login = ({
   }, "Sign Up"))))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Login));
+const Login = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(LoginUI);
+
+/***/ }),
+
+/***/ "./pages/login/Login.module.css":
+/*!**************************************!*\
+  !*** ./pages/login/Login.module.css ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"content": "Login_content__7NETF",
+	"paper": "Login_paper__23SyK",
+	"form": "Login_form__1NHaK",
+	"buttonBox": "Login_buttonBox__3ohVm",
+	"submit": "Login_submit__2dN41",
+	"signup": "Login_signup__2zNDK",
+	"link": "Login_link__2aZSc"
+};
+
+/***/ }),
+
+/***/ "./pages/login/index.js":
+/*!******************************!*\
+  !*** ./pages/login/index.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Login */ "./pages/login/Login.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Login__WEBPACK_IMPORTED_MODULE_0__["Login"]; });
+
+
 
 /***/ }),
 
