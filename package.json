@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint ./pages ./components/ ./lib/"
   },
   "keywords": [],
   "author": "",
@@ -28,10 +29,15 @@
     "next": "^9.3.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "validator": "^12.2.0",
     "yup": "^0.28.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0"
   }
 }

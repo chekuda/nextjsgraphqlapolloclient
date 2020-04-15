@@ -27,7 +27,7 @@ export const getPostsById = connectToDb(async(_, { user }) => {
   }
 })
 
-export const findPostsByUserId = connectToDb(async({}, { user }) => {
+export const findPostsByUserId = connectToDb(async(_, { user }) => {
   try {
     if(!user) {
       throw new Error('User not Logged')

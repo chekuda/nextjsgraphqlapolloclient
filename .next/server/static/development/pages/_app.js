@@ -3,12 +3,6 @@ module.exports =
 /******/ 	// The module cache
 /******/ 	var installedModules = require('../../../ssr-module-cache.js');
 /******/
-/******/ 	// object to store loaded chunks
-/******/ 	// "0" means "already loaded"
-/******/ 	var installedChunks = {
-/******/ 		"static/development/pages/_app.js": 0
-/******/ 	};
-/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -92,13 +86,6 @@ module.exports =
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	// uncaught error handler for webpack runtime
-/******/ 	__webpack_require__.oe = function(err) {
-/******/ 		process.nextTick(function() {
-/******/ 			throw err; // catch this error by using import().catch()
-/******/ 		});
-/******/ 	};
-/******/
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -118,23 +105,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginLink", function() { return LoginLink; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/AccountCircle */ "@material-ui/icons/AccountCircle");
-/* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Menu */ "@material-ui/core/Menu");
-/* harmony import */ var _material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "@material-ui/core/MenuItem");
-/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _lib_getCookie__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../lib/getCookie */ "./lib/getCookie.js");
-/* harmony import */ var _UserHeader_module_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./UserHeader.module.css */ "./components/UserHeader/UserHeader.module.css");
-/* harmony import */ var _UserHeader_module_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_UserHeader_module_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/AccountCircle */ "@material-ui/icons/AccountCircle");
+/* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Menu */ "@material-ui/core/Menu");
+/* harmony import */ var _material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "@material-ui/core/MenuItem");
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _lib_getCookie__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../lib/getCookie */ "./lib/getCookie.js");
+/* harmony import */ var _UserHeader_module_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./UserHeader.module.css */ "./components/UserHeader/UserHeader.module.css");
+/* harmony import */ var _UserHeader_module_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_UserHeader_module_css__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/components/UserHeader/UserHeader.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -147,24 +136,25 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const LoginLink = () => __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_3___default.a, {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15
-  },
-  __self: undefined
-}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/login",
+
+const LoginLink = () => __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 16
+  },
+  __self: undefined
+}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  href: "/login",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17
   },
   __self: undefined
 }, __jsx("a", {
   title: "login",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17
+    lineNumber: 18
   },
   __self: undefined
 }, "login")));
@@ -189,33 +179,33 @@ const UserHeader = ({
   const onLogOut = () => {
     handleClose();
     router.push('/login');
-    document.cookie = `${_lib_getCookie__WEBPACK_IMPORTED_MODULE_8__["COOKIENAME"]}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    document.cookie = `${_lib_getCookie__WEBPACK_IMPORTED_MODULE_9__["COOKIENAME"]}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   };
 
   return loggedIn ? __jsx("div", {
-    className: _UserHeader_module_css__WEBPACK_IMPORTED_MODULE_9___default.a.container,
+    className: _UserHeader_module_css__WEBPACK_IMPORTED_MODULE_10___default.a.container,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6___default.a, {
     "aria-controls": "simple-menu",
     "aria-haspopup": "true",
     onClick: handleClick,
     color: "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: undefined
-  }, __jsx(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: undefined
-  })), __jsx(_material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, __jsx(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  })), __jsx(_material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_7___default.a, {
     id: "simple-menu",
     anchorEl: anchorEl,
     keepMounted: true,
@@ -223,26 +213,30 @@ const UserHeader = ({
     onClose: handleClose,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: undefined
-  }, __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_7___default.a, {
+  }, __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_8___default.a, {
     onClick: onLogOut,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: undefined
   }, "Logout"))) : __jsx(LoginLink, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 55
     },
     __self: undefined
   });
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(UserHeader));
+UserHeader.propTypes = {
+  loggedIn: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  router: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(UserHeader));
 
 /***/ }),
 
@@ -289,13 +283,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withApollo", function() { return withApollo; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
-/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _createApolloClient__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./createApolloClient */ "./lib/createApolloClient.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
+/* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _createApolloClient__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./createApolloClient */ "./lib/createApolloClient.js");
+/* harmony import */ var _apollo_react_ssr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @apollo/react-ssr */ "@apollo/react-ssr");
+/* harmony import */ var _apollo_react_ssr__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_ssr__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/lib/apollo.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -310,6 +308,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
 
 
 
@@ -366,12 +366,12 @@ const initApolloClient = (initialState, ctx) => {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (true) {
-    return Object(_createApolloClient__WEBPACK_IMPORTED_MODULE_4__["default"])(initialState, ctx);
+    return Object(_createApolloClient__WEBPACK_IMPORTED_MODULE_5__["default"])(initialState, ctx);
   } // Reuse client on the client-side
 
 
   if (!globalApolloClient) {
-    globalApolloClient = Object(_createApolloClient__WEBPACK_IMPORTED_MODULE_4__["default"])(initialState, ctx);
+    globalApolloClient = Object(_createApolloClient__WEBPACK_IMPORTED_MODULE_5__["default"])(initialState, ctx);
   }
 
   return globalApolloClient;
@@ -406,22 +406,26 @@ const withApollo = ({
       client = initApolloClient(apolloState, undefined);
     }
 
-    return __jsx(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__["ApolloProvider"], {
+    return __jsx(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["ApolloProvider"], {
       client: client,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 96
       },
       __self: undefined
     }, __jsx(PageComponent, _extends({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 97
       },
       __self: undefined
     })));
-  }; // Set the correct displayName in development
+  };
 
+  WithApollo.propTypes = {
+    apolloClient: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+    apolloState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  }; // Set the correct displayName in development
 
   if (true) {
     const displayName = PageComponent.displayName || PageComponent.name || 'Component';
@@ -440,7 +444,7 @@ const withApollo = ({
       if (PageComponent.getInitialProps) {
         pageProps = await PageComponent.getInitialProps(ctx);
       } else if (inAppContext) {
-        pageProps = await next_app__WEBPACK_IMPORTED_MODULE_1___default.a.getInitialProps(ctx);
+        pageProps = await next_app__WEBPACK_IMPORTED_MODULE_2___default.a.getInitialProps(ctx);
       } // Only on the server:
 
 
@@ -459,11 +463,9 @@ const withApollo = ({
           try {
             // Import `@apollo/react-ssr` dynamically.
             // We don't want to have this in our client bundle.
-            const {
-              getDataFromTree
-            } = await Promise.resolve(/*! import() */).then(__webpack_require__.t.bind(null, /*! @apollo/react-ssr */ "@apollo/react-ssr", 7)); // Since AppComponents and PageComponents have different context types
+            // const { getDataFromTree } = await import('@apollo/react-ssr')
+            // Since AppComponents and PageComponents have different context types
             // we need to modify their props a little.
-
             let props;
 
             if (inAppContext) {
@@ -483,10 +485,10 @@ const withApollo = ({
             // https://www.apollographql.com/docs/react/data/fragments/
 
 
-            await getDataFromTree(__jsx(AppTree, _extends({}, props, {
+            await Object(_apollo_react_ssr__WEBPACK_IMPORTED_MODULE_6__["getDataFromTree"])(__jsx(AppTree, _extends({}, props, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 150
+                lineNumber: 157
               },
               __self: undefined
             })));
@@ -499,7 +501,7 @@ const withApollo = ({
           // head side effect therefore need to be cleared manually
 
 
-          next_head__WEBPACK_IMPORTED_MODULE_2___default.a.rewind();
+          next_head__WEBPACK_IMPORTED_MODULE_3___default.a.rewind();
         }
       }
 
@@ -537,7 +539,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function createApolloClient(initialState, ctx) {
+/**
+ * @params
+ * InitialState
+ * ctx
+ */
+
+function createApolloClient(initialState) {
   // The `ctx` (NextPageContext) will only be present on the server.
   // use it to extract auth headers (ctx.req) or similar.
   return new apollo_boost__WEBPACK_IMPORTED_MODULE_0___default.a({
@@ -2489,30 +2497,33 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/AppBar */ "@material-ui/core/AppBar");
-/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Toolbar */ "@material-ui/core/Toolbar");
-/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib */ "./lib/index.js");
-/* harmony import */ var _lib_theme_theme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/theme/theme */ "./lib/theme/theme.js");
-/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login */ "./pages/login/index.js");
-/* harmony import */ var _components_UserHeader__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/UserHeader */ "./components/UserHeader/index.js");
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.module.css */ "./pages/app.module.css");
-/* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_app_module_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/AppBar */ "@material-ui/core/AppBar");
+/* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Toolbar */ "@material-ui/core/Toolbar");
+/* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib */ "./lib/index.js");
+/* harmony import */ var _lib_theme_theme__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib/theme/theme */ "./lib/theme/theme.js");
+/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./login */ "./pages/login/index.js");
+/* harmony import */ var _components_UserHeader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/UserHeader */ "./components/UserHeader/index.js");
+/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
+/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.module.css */ "./pages/app.module.css");
+/* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_app_module_css__WEBPACK_IMPORTED_MODULE_13__);
 var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 
 
 
@@ -2537,82 +2548,82 @@ const MyApp = ({
 }) => {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     if (loggedIn || !loggedIn && (pathname === '/signup' || pathname === '/login')) return;
-    next_router__WEBPACK_IMPORTED_MODULE_6___default.a.replace(pathname, '/login');
+    next_router__WEBPACK_IMPORTED_MODULE_7___default.a.replace(pathname, '/login');
   }, [pathname]);
-  return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
-    theme: _lib_theme_theme__WEBPACK_IMPORTED_MODULE_8__["theme"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: undefined
-  }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    position: "fixed",
-    color: "primary",
+  return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
+    theme: _lib_theme_theme__WEBPACK_IMPORTED_MODULE_9__["theme"],
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.header,
+  }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    position: "fixed",
+    color: "primary",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: undefined
-  }, __jsx("div", {
-    className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.menu,
+  }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    className: _app_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.header,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: undefined
-  }, privatePages.map(page => __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, __jsx("div", {
+    className: _app_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.menu,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, privatePages.map(page => __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     key: page,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: `/${page}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("a", {
     title: page,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: undefined
-  }, page))))), __jsx(_components_UserHeader__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, page))))), __jsx(_components_UserHeader__WEBPACK_IMPORTED_MODULE_11__["default"], {
     loggedIn: loggedIn,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: undefined
   }))), __jsx("div", {
-    className: _app_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.content,
+    className: _app_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.content,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: undefined
-  }, !loggedIn && !(pathname === '/signup' || pathname === '/login') ? __jsx(_login__WEBPACK_IMPORTED_MODULE_9__["default"], _extends({}, pageProps, {
+  }, !loggedIn && !(pathname === '/signup' || pathname === '/login') ? __jsx(_login__WEBPACK_IMPORTED_MODULE_10__["default"], _extends({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: undefined
   })) : __jsx(Component, _extends({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: undefined
   }))));
@@ -2625,15 +2636,21 @@ MyApp.getInitialProps = async ({
     req,
     pathname
   } = ctx;
-  const token = req ? Object(_lib__WEBPACK_IMPORTED_MODULE_7__["getCookie"])(req.headers.cookie) : Object(_lib__WEBPACK_IMPORTED_MODULE_7__["getCookie"])(document.cookie);
-  let loggedIn = Object(_lib__WEBPACK_IMPORTED_MODULE_7__["verifyToken"])(token);
+  const token = req ? Object(_lib__WEBPACK_IMPORTED_MODULE_8__["getCookie"])(req.headers.cookie) : Object(_lib__WEBPACK_IMPORTED_MODULE_8__["getCookie"])(document.cookie);
+  let loggedIn = Object(_lib__WEBPACK_IMPORTED_MODULE_8__["verifyToken"])(token);
   return {
     loggedIn: !!loggedIn,
     pathname
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_lib__WEBPACK_IMPORTED_MODULE_7__["withApollo"])({
+MyApp.propTypes = {
+  Component: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  pageProps: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  loggedIn: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  pathname: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_lib__WEBPACK_IMPORTED_MODULE_8__["withApollo"])({
   ssr: true
 })(MyApp));
 
@@ -2668,30 +2685,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "formik");
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
-/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! yup */ "yup");
-/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
-/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Paper */ "@material-ui/core/Paper");
-/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
-/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/Divider */ "@material-ui/core/Divider");
-/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Login.module.css */ "./pages/login/Login.module.css");
-/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_Login_module_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "formik");
+/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @apollo/react-hooks */ "@apollo/react-hooks");
+/* harmony import */ var _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! yup */ "yup");
+/* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(yup__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! apollo-boost */ "apollo-boost");
+/* harmony import */ var apollo_boost__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(apollo_boost__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Paper */ "@material-ui/core/Paper");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/Typography */ "@material-ui/core/Typography");
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/Divider */ "@material-ui/core/Divider");
+/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Login.module.css */ "./pages/login/Login.module.css");
+/* harmony import */ var _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_Login_module_css__WEBPACK_IMPORTED_MODULE_13__);
 var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login/Login.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2714,7 +2733,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-const LOGIN = apollo_boost__WEBPACK_IMPORTED_MODULE_5__["gql"]`
+
+const LOGIN = apollo_boost__WEBPACK_IMPORTED_MODULE_6__["gql"]`
   mutation Login($email: String!, $password: String!) {
     login( email: $email, password: $password) {
       user {
@@ -2725,9 +2745,9 @@ const LOGIN = apollo_boost__WEBPACK_IMPORTED_MODULE_5__["gql"]`
     }
   }
 `;
-const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_4__["object"]().shape({
-  email: yup__WEBPACK_IMPORTED_MODULE_4__["string"]().email('Invalid email'),
-  password: yup__WEBPACK_IMPORTED_MODULE_4__["string"]().min(6, 'Too Short!').max(50, 'Too Long!')
+const LoginSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
+  email: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().email('Invalid email'),
+  password: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().min(6, 'Too Short!').max(50, 'Too Long!')
 });
 
 const LoginUI = ({
@@ -2735,9 +2755,8 @@ const LoginUI = ({
 }) => {
   const [login, {
     data = {},
-    loading,
     error
-  }] = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__["useMutation"])(LOGIN);
+  }] = Object(_apollo_react_hooks__WEBPACK_IMPORTED_MODULE_4__["useMutation"])(LOGIN);
   const {
     0: isLogged,
     1: setIsLogged
@@ -2754,36 +2773,36 @@ const LoginUI = ({
   }
 
   return __jsx("div", {
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.content,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: undefined
-  }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7___default.a, {
-    elevation: 3,
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.paper,
+    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.content,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: undefined
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default.a, {
-    align: "center",
-    variant: "h2",
-    gutterBottom: true,
+  }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default.a, {
+    elevation: 3,
+    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.paper,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
     },
     __self: undefined
-  }, "Login"), __jsx(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_10___default.a, {
+  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    align: "center",
+    variant: "h2",
+    gutterBottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: undefined
-  }), __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Formik"], {
+  }, "Login"), __jsx(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: undefined
+  }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
     validateOnBlur: true,
     initialValues: {
       email: '',
@@ -2797,7 +2816,7 @@ const LoginUI = ({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: undefined
   }, ({
@@ -2809,15 +2828,15 @@ const LoginUI = ({
     handleSubmit,
     isSubmitting
   }) => {
-    return __jsx(formik__WEBPACK_IMPORTED_MODULE_1__["Form"], {
+    return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Form"], {
       onSubmit: handleSubmit,
-      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.form,
+      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.form,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 75
       },
       __self: undefined
-    }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
       id: "email",
       label: "Email",
       type: "email",
@@ -2830,10 +2849,10 @@ const LoginUI = ({
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 76
       },
       __self: undefined
-    }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
       id: "password",
       label: "Password",
       type: "password",
@@ -2846,18 +2865,18 @@ const LoginUI = ({
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: undefined
-    }), __jsx("div", {
-      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.buttonBox,
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 77
       },
       __self: undefined
-    }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11___default.a, {
-      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.submit,
+    }), __jsx("div", {
+      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.buttonBox,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: undefined
+    }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12___default.a, {
+      className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.submit,
       color: "primary",
       size: "large",
       variant: "contained",
@@ -2865,43 +2884,46 @@ const LoginUI = ({
       disabled: isSubmitting && !error,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 79
       },
       __self: undefined
     }, "Login")));
   }), __jsx("div", {
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.signup,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: undefined
-  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default.a, {
-    align: "center",
-    color: "primary",
+    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.signup,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 94
     },
     __self: undefined
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-    href: "/signup",
+  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    align: "center",
+    color: "primary",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 95
     },
     __self: undefined
-  }, __jsx("a", {
-    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_12___default.a.link,
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    href: "/signup",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 96
     },
     __self: undefined
+  }, __jsx("a", {
+    className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.link,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: undefined
   }, "Sign Up"))))));
 };
 
-const Login = Object(next_router__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(LoginUI);
+LoginUI.propTypes = {
+  router: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+};
+const Login = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(LoginUI);
 
 /***/ }),
 

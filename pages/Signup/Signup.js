@@ -1,5 +1,4 @@
 import React from 'react'
-import Router from 'next/router'
 import { useMutation } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
 import { Formik, Form } from 'formik'
@@ -42,7 +41,8 @@ const SignupSchema = Yup.object().shape({
 })
 
 export const Signup = () => {
-  const [signUp, { data, loading, error }] = useMutation(SIGN_UP)
+  const [signUp, { data }] = useMutation(SIGN_UP)
+  console.log('data', data)
   return <div className={styles.content}>
     <Paper elevation={3} className={styles.paper}>
       <Typography align='center' variant='h2' gutterBottom={true}>

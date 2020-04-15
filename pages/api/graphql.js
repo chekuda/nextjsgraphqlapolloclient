@@ -53,7 +53,6 @@ const root = {
   login,
 }
 
-
 export default async (req, res) => {
   const { query, variables } = req.body
   const token = getCookie(req.headers.cookie)
@@ -62,4 +61,4 @@ export default async (req, res) => {
   const response = await graphql(schema, query, root, context, variables)
 
   return res.end(JSON.stringify(response));
-};
+}

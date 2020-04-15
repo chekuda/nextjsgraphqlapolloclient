@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { Formik, Form } from 'formik'
 import { withRouter } from 'next/router'
 import { useMutation } from '@apollo/react-hooks'
@@ -34,7 +35,7 @@ const LoginSchema = Yup.object().shape({
 })
 
 const LoginUI = ({ router }) => {
-  const [login, { data = {}, loading, error }] = useMutation(LOGIN)
+  const [login, { data = {}, error }] = useMutation(LOGIN)
   const [isLogged, setIsLogged] = useState(false)
   useEffect(() => {
     if(data.login) {
@@ -99,6 +100,10 @@ const LoginUI = ({ router }) => {
       </div>
     </Paper>
   </div>
+}
+
+LoginUI.propTypes = {
+  router: PropTypes.object
 }
 
 export const Login = withRouter(LoginUI)

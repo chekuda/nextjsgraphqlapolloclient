@@ -62,11 +62,10 @@ export const login = connectToDb(async ({ email, password }) => {
   }
 })
 
-
 /*
   Get all users
 */
-export const getUsers = connectToDb(async ({}, { user }) => {
+export const getUsers = connectToDb(async () => {
   try {
     let user = await User.find()
     return user

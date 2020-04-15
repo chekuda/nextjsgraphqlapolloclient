@@ -1,5 +1,6 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -63,6 +64,13 @@ MyApp.getInitialProps = async ({ ctx }) => {
     loggedIn: !!loggedIn,
     pathname
   }
+}
+
+MyApp.propTypes = {
+  Component: PropTypes.func,
+  pageProps: PropTypes.object,
+  loggedIn: PropTypes.bool,
+  pathname: PropTypes.string
 }
 
 export default withApollo({ ssr: true })(MyApp)

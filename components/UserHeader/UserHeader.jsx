@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
 import Typography from '@material-ui/core/Typography'
@@ -53,6 +54,11 @@ const UserHeader = ({ loggedIn, router }) => {
         </div>
       : <LoginLink />
   )
+}
+
+UserHeader.propTypes = {
+  loggedIn: PropTypes.bool,
+  router: PropTypes.object
 }
 
 export default withRouter(UserHeader)
