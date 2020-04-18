@@ -16,6 +16,12 @@ const schema = buildSchema(`
     userName: String
     email: String
     password: String
+    type: String
+    created: String
+    labels: [Label]
+  }
+  type Label {
+    name: String
   }
   input UserInput {
     userName: String

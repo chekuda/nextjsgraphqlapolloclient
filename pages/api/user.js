@@ -1,8 +1,9 @@
 import bcrypt from 'bcrypt'
 
-import { createToken } from '../../lib'
+import { createToken } from '../../lib/jwthelper'
 import isEmail from 'validator/lib/isEmail'
 import User from '../../models/user'
+import Label from '../../models/label'
 import connectToDb from './middlewares/db'
 
 const validateEmail = email => {
@@ -31,7 +32,9 @@ export const signUp = connectToDb(async ({
     let user = await User.create({
       userName,
       email,
-      password: hashedPassword
+      password: hashedPassword,
+      type: 'user',
+      created: new Date().toISOString(),
     })
     const token = createToken(user.id)
 
@@ -81,7 +84,36 @@ export const getUsers = connectToDb(async () => {
 
 export const getUserById = connectToDb(async ({ id }) => {
   try {
-    let user = await User.findById(id)
+    const user = await User.findById(id).populate('labels')
+
+    return user
+  }
+  catch(e) {
+    return e
+  }
+})
+
+/*
+  Create worker
+*/
+
+export const createWorker = connectToDb(async ({
+  userName,
+  email,
+  labelName
+}) => {
+  try {
+    const label = await Label.find({ name: labelName })
+    if(!label.length) {
+      throw new Error('Label doesnt exist')
+    }
+    const user = await User.create({
+      userName,
+      email,
+      type: 'worker',
+      created: new Date().toISOString(),
+      labels: [label[0]._id]
+    })
     return user
   }
   catch(e) {

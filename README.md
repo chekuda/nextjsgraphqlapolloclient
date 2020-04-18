@@ -13,3 +13,7 @@
   - SASS (no yet)
   - CSS variables
 
+## Populate db
+
+- Play with npm run seeds in order to populate the db
+
