@@ -14,6 +14,7 @@ import styles from './Home.module.css'
 export const Home = () => {
   return data.map(({ img, title, description }, index) => (
     <Card key={index} className={styles.card}>
+      {console.log('asdas')}
       <CardActionArea>
         <CardMedia
           className={styles.cardMedia}
