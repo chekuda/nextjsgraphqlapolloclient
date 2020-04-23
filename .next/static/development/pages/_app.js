@@ -33518,7 +33518,7 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".app_header__1fdBp {\n  display: flex;\n  justify-content: space-between;\n}\n.app_menu__20LvS {\n  display: flex;\n}\n.app_header__1fdBp a{\n  color: var(--white-color);\n  text-decoration: none;\n  cursor: pointer;\n  padding-right: 20px;\n  transition: color 0.2 ease-in-out;\n}\n.app_header__1fdBp a:hover {\n  color: var(--secondary-color);\n}\n.app_button__2YfSE span{\n  color: var(--white-color);\n}\n.app_content__1SQ4Q {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 74px 10px 10px 10px;\n  justify-content: center;\n}", "",{"version":3,"sources":["/Users/checa/Desktop/checa/nextjs/pages/app.module.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,8BAA8B;AAChC;AACA;EACE,aAAa;AACf;AACA;EACE,yBAAyB;EACzB,qBAAqB;EACrB,eAAe;EACf,mBAAmB;EACnB,iCAAiC;AACnC;AACA;EACE,6BAA6B;AAC/B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,aAAa;EACb,eAAe;EACf,4BAA4B;EAC5B,uBAAuB;AACzB","file":"app.module.css","sourcesContent":[".header {\n  display: flex;\n  justify-content: space-between;\n}\n.menu {\n  display: flex;\n}\n.header a{\n  color: var(--white-color);\n  text-decoration: none;\n  cursor: pointer;\n  padding-right: 20px;\n  transition: color 0.2 ease-in-out;\n}\n.header a:hover {\n  color: var(--secondary-color);\n}\n.button span{\n  color: var(--white-color);\n}\n.content {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 74px 10px 10px 10px;\n  justify-content: center;\n}"]}]);
+exports.push([module.i, ".app_header__1fdBp {\n  display: flex;\n  justify-content: space-between;\n}\n.app_menu__20LvS {\n  display: flex;\n}\n.app_header__1fdBp a{\n  color: var(--white-color);\n  text-decoration: none;\n  cursor: pointer;\n  padding-right: 20px;\n  transition: color 0.2 ease-in-out;\n}\n.app_header__1fdBp a:hover {\n  color: var(--secondary-color);\n}\n.app_button__2YfSE span{\n  color: var(--white-color);\n}\n.app_content__1SQ4Q {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 74px 8px 8px 8px;\n  justify-content: center;\n  overflow: scroll;\n  height: calc(100vh - 84px);\n}", "",{"version":3,"sources":["/Users/checa/Desktop/checa/nextjs/pages/app.module.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,8BAA8B;AAChC;AACA;EACE,aAAa;AACf;AACA;EACE,yBAAyB;EACzB,qBAAqB;EACrB,eAAe;EACf,mBAAmB;EACnB,iCAAiC;AACnC;AACA;EACE,6BAA6B;AAC/B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,aAAa;EACb,eAAe;EACf,yBAAyB;EACzB,uBAAuB;EACvB,gBAAgB;EAChB,0BAA0B;AAC5B","file":"app.module.css","sourcesContent":[".header {\n  display: flex;\n  justify-content: space-between;\n}\n.menu {\n  display: flex;\n}\n.header a{\n  color: var(--white-color);\n  text-decoration: none;\n  cursor: pointer;\n  padding-right: 20px;\n  transition: color 0.2 ease-in-out;\n}\n.header a:hover {\n  color: var(--secondary-color);\n}\n.button span{\n  color: var(--white-color);\n}\n.content {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 74px 8px 8px 8px;\n  justify-content: center;\n  overflow: scroll;\n  height: calc(100vh - 84px);\n}"]}]);
 // Exports
 exports.locals = {
 	"header": "app_header__1fdBp",
@@ -33594,7 +33594,7 @@ exports.push([module.i, "/*! normalize.css v8.0.1 | MIT License | github.com/nec
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ":root {\n  --primary-color: #2196f3;\n  --secondary-color: #ff9100;\n  --white-color: #fff;\n  --light-grey: rgba(0, 0, 0, 0.12);\n}", "",{"version":3,"sources":["/Users/checa/Desktop/checa/nextjs/styles/variables.css"],"names":[],"mappings":"AAAA;EACE,wBAAwB;EACxB,0BAA0B;EAC1B,mBAAmB;EACnB,iCAAiC;AACnC","file":"variables.css","sourcesContent":[":root {\n  --primary-color: #2196f3;\n  --secondary-color: #ff9100;\n  --white-color: #fff;\n  --light-grey: rgba(0, 0, 0, 0.12);\n}"]}]);
+exports.push([module.i, ":root {\n  --primary-color: #2196f3;\n  --secondary-color: #ff9100;\n  --white-color: #fff;\n  --light-grey: rgba(0, 0, 0, 0.12);\n\n  --basic-padding: 8px;\n}", "",{"version":3,"sources":["/Users/checa/Desktop/checa/nextjs/styles/variables.css"],"names":[],"mappings":"AAAA;EACE,wBAAwB;EACxB,0BAA0B;EAC1B,mBAAmB;EACnB,iCAAiC;;EAEjC,oBAAoB;AACtB","file":"variables.css","sourcesContent":[":root {\n  --primary-color: #2196f3;\n  --secondary-color: #ff9100;\n  --white-color: #fff;\n  --light-grey: rgba(0, 0, 0, 0.12);\n\n  --basic-padding: 8px;\n}"]}]);
 
 
 /***/ }),
@@ -87704,7 +87704,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_module_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_app_module_css__WEBPACK_IMPORTED_MODULE_15__);
 
 
-var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/_app.js";
+
+var _this = undefined,
+    _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/_app.js";
+
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -87720,7 +87723,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-var privatePages = ['home', 'trends', 'preferidos'];
+var privatePages = ['home', 'trends', 'preferidos', 'workers'];
 
 var MyApp = function MyApp(_ref) {
   var Component = _ref.Component,
@@ -87733,82 +87736,93 @@ var MyApp = function MyApp(_ref) {
   }, [pathname]);
   return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["ThemeProvider"], {
     theme: _lib_theme_theme__WEBPACK_IMPORTED_MODULE_11__["theme"],
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
+      lineNumber: 27,
+      columnNumber: 5
+    }
   }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_5__["default"], {
     position: "fixed",
     color: "primary",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
+      lineNumber: 28,
+      columnNumber: 9
+    }
   }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_6__["default"], {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_15___default.a.header,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
+      lineNumber: 29,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_15___default.a.menu,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
+      lineNumber: 30,
+      columnNumber: 13
+    }
   }, privatePages.map(function (page) {
     return __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_7__["default"], {
       key: page,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
+        lineNumber: 33,
+        columnNumber: 19
+      }
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
       href: "/".concat(page),
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
-      },
-      __self: this
+        lineNumber: 34,
+        columnNumber: 21
+      }
     }, __jsx("a", {
       title: page,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
-      },
-      __self: this
+        lineNumber: 35,
+        columnNumber: 23
+      }
     }, page)));
   })), __jsx(_components_UserHeader__WEBPACK_IMPORTED_MODULE_13__["default"], {
     loggedIn: loggedIn,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: this
+      lineNumber: 40,
+      columnNumber: 13
+    }
   }))), __jsx("div", {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_15___default.a.content,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
+      lineNumber: 43,
+      columnNumber: 9
+    }
   }, !loggedIn && !(pathname === '/signup' || pathname === '/login') ? __jsx(_login__WEBPACK_IMPORTED_MODULE_12__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, pageProps, {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: this
+      lineNumber: 46,
+      columnNumber: 15
+    }
   })) : __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, pageProps, {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
+      lineNumber: 47,
+      columnNumber: 15
+    }
   }))));
 };
 

@@ -1,0 +1,25 @@
+.paper {
+  width: 100%;
+  max-height: calc(100vh - 84px);
+  overflow: hidden;
+  display: flex;
+}
+.userContainer {
+  padding: calc(var(--basic-padding) * 2);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.userImage {
+  margin: 0 auto;
+}
+.section {
+  width: 100%;
+}
+.inputSection {
+  padding-top: 16px;
+  width: 100%;
+}
+.userDescription {
+  overflow: scroll;
+}
