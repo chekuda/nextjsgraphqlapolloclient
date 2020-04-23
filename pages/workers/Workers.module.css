@@ -1,0 +1,35 @@
+.root {
+  width: 100%;
+  height: calc(100vh - 84px);
+}
+.paper {
+  width: 100%;
+  height: calc(100vh - 84px);
+  overflow: hidden;
+}
+
+.tableContainer {
+  transition: width 1s ease-in-out;
+}
+
+.gridFlex {
+  display: flex;
+}
+
+.filters {
+  display: flex;
+  padding: calc(var(--basic-padding) * 2);
+  justify-content: space-between;
+}
+
+.filterAction {
+  display: flex;
+}
+.action {
+  margin: 0 calc(var(--basic-padding) * 2);
+}
+
+.saveActions {
+  display: flex;
+  align-self: flex-end;
+}

@@ -15,7 +15,7 @@ import UserHeader from '../components/UserHeader'
 import '../styles/global.css'
 import styles from './app.module.css'
 
-const privatePages = ['home', 'trends', 'preferidos']
+const privatePages = ['home', 'trends', 'preferidos', 'workers']
 
 const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
   useEffect(() => {

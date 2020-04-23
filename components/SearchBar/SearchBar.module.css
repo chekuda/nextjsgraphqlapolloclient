@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--basic-padding);
+}
+.searchinput {
+  padding: 9px;
+  padding-left: calc(var(--basic-padding) * 4);
+  border-radius: 5px;
+  border: solid 1px #ccc;
+}

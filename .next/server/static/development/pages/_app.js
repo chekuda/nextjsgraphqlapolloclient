@@ -2554,7 +2554,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-const privatePages = ['home', 'trends', 'preferidos'];
+const privatePages = ['home', 'trends', 'preferidos', 'workers'];
 
 const MyApp = ({
   Component,
@@ -2568,80 +2568,91 @@ const MyApp = ({
   }, [pathname]);
   return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
     theme: _lib_theme_theme__WEBPACK_IMPORTED_MODULE_9__["theme"],
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: undefined
+      lineNumber: 27,
+      columnNumber: 5
+    }
   }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_3___default.a, {
     position: "fixed",
     color: "primary",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: undefined
+      lineNumber: 28,
+      columnNumber: 9
+    }
   }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.header,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: undefined
+      lineNumber: 29,
+      columnNumber: 11
+    }
   }, __jsx("div", {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.menu,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: undefined
+      lineNumber: 30,
+      columnNumber: 13
+    }
   }, privatePages.map(page => __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5___default.a, {
     key: page,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: undefined
+      lineNumber: 33,
+      columnNumber: 19
+    }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
     href: `/${page}`,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: undefined
+      lineNumber: 34,
+      columnNumber: 21
+    }
   }, __jsx("a", {
     title: page,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
+      lineNumber: 35,
+      columnNumber: 23
+    }
   }, page))))), __jsx(_components_UserHeader__WEBPACK_IMPORTED_MODULE_11__["default"], {
     loggedIn: loggedIn,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: undefined
+      lineNumber: 40,
+      columnNumber: 13
+    }
   }))), __jsx("div", {
     className: _app_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.content,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: undefined
+      lineNumber: 43,
+      columnNumber: 9
+    }
   }, !loggedIn && !(pathname === '/signup' || pathname === '/login') ? __jsx(_login__WEBPACK_IMPORTED_MODULE_10__["default"], _extends({}, pageProps, {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
-    },
-    __self: undefined
+      lineNumber: 46,
+      columnNumber: 15
+    }
   })) : __jsx(Component, _extends({}, pageProps, {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: undefined
+      lineNumber: 47,
+      columnNumber: 15
+    }
   }))));
 };
 
