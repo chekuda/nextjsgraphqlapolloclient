@@ -1,5 +1,6 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
 import Paper from '@material-ui/core/Paper'
+import SaveIcon from '@material-ui/icons/Save'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
@@ -8,8 +9,9 @@ import Checkbox from '@material-ui/core/Checkbox'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button'
 
+import DownloadButton from '../../components/DownloadButton'
 import SearchBar from '../../components/SearchBar'
 import UserProfile from '../../components/UserProfile'
 import myWorkers from '../../data/workers'
@@ -41,6 +43,7 @@ const filteredWorkers = ({ filters, workers, workersCheked }) => {
 }
 
 const Workers = () => {
+  const tableRef = useRef(null)
   const [workerSelected, setWorkerSelected] = useState(false)
   const [filters, setFilters] = useState({})
   const [workerProfileOpened, setProfileWorkerOpened] = useState(false)
@@ -89,18 +92,16 @@ const Workers = () => {
               </div>
             </div>
             <div className={styles.saveActions}>
-              <Button color='primary' variant='contained'>
-                Download
+              <Button color='primary' variant='contained' startIcon={<SaveIcon />}>
+                Save List
               </Button>
               <div className={styles.action}>
-                <Button color='primary' variant='contained'>
-                  Save List
-                </Button>
+                <DownloadButton node={tableRef} workers={filteredWorkers({ filters, workers: myWorkers, workersCheked })}/>
               </div>
             </div>
           </div>
           <TableContainer className={styles.root}>
-            <Table stickyHeader aria-label="sticky table" onClick={onWorkerClicked}>
+            <Table stickyHeader aria-label="sticky table" onClick={onWorkerClicked} ref={tableRef}>
               <TableHead>
                 <TableRow>
                   {columns.map((column) => (

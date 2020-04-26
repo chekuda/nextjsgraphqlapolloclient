@@ -45,7 +45,7 @@ const LoginUI = ({ router }) => {
   }, [data])
 
   if(isLogged) {
-    router.push('/home')
+    router.push('/workers')
   }
 
   return <div className={styles.content}>

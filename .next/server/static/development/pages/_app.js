@@ -2554,7 +2554,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-const privatePages = ['home', 'trends', 'preferidos', 'workers'];
+const privatePages = ['workers'];
 
 const MyApp = ({
   Component,
@@ -2796,39 +2796,43 @@ const LoginUI = ({
   }, [data]);
 
   if (isLogged) {
-    router.push('/home');
+    router.push('/workers');
   }
 
   return __jsx("div", {
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.content,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: undefined
+      lineNumber: 51,
+      columnNumber: 10
+    }
   }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default.a, {
     elevation: 3,
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.paper,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
+      lineNumber: 52,
+      columnNumber: 5
+    }
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9___default.a, {
     align: "center",
     variant: "h2",
     gutterBottom: true,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: undefined
+      lineNumber: 53,
+      columnNumber: 7
+    }
   }, "Login"), __jsx(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_11___default.a, {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: undefined
+      lineNumber: 56,
+      columnNumber: 7
+    }
   }), __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Formik"], {
     validateOnBlur: true,
     initialValues: {
@@ -2841,11 +2845,12 @@ const LoginUI = ({
         variables: _objectSpread({}, values)
       });
     },
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: undefined
+      lineNumber: 58,
+      columnNumber: 9
+    }
   }, ({
     values,
     errors,
@@ -2858,11 +2863,12 @@ const LoginUI = ({
     return __jsx(formik__WEBPACK_IMPORTED_MODULE_2__["Form"], {
       onSubmit: handleSubmit,
       className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.form,
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: undefined
+        lineNumber: 75,
+        columnNumber: 19
+      }
     }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
       id: "email",
       label: "Email",
@@ -2874,11 +2880,12 @@ const LoginUI = ({
       error: errors.email && touched.email && !!errors.email,
       helperText: errors.email,
       required: true,
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: undefined
+        lineNumber: 76,
+        columnNumber: 15
+      }
     }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_10___default.a, {
       id: "password",
       label: "Password",
@@ -2890,18 +2897,20 @@ const LoginUI = ({
       error: errors.password && touched.password && !!errors.password,
       helperText: errors.password,
       required: true,
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
-      },
-      __self: undefined
+        lineNumber: 77,
+        columnNumber: 15
+      }
     }), __jsx("div", {
       className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.buttonBox,
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
-      },
-      __self: undefined
+        lineNumber: 78,
+        columnNumber: 15
+      }
     }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_12___default.a, {
       className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.submit,
       color: "primary",
@@ -2909,41 +2918,46 @@ const LoginUI = ({
       variant: "contained",
       type: "submit",
       disabled: isSubmitting && !error,
+      __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: undefined
+        lineNumber: 79,
+        columnNumber: 17
+      }
     }, "Login")));
   }), __jsx("div", {
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.signup,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: undefined
+      lineNumber: 94,
+      columnNumber: 7
+    }
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9___default.a, {
     align: "center",
     color: "primary",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: undefined
+      lineNumber: 95,
+      columnNumber: 9
+    }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
     href: "/signup",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: undefined
+      lineNumber: 96,
+      columnNumber: 11
+    }
   }, __jsx("a", {
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_13___default.a.link,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: undefined
+      lineNumber: 97,
+      columnNumber: 13
+    }
   }, "Sign Up"))))));
 };
 

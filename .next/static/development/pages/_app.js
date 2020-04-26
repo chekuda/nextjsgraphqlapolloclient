@@ -87799,7 +87799,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-var privatePages = ['home', 'trends', 'preferidos', 'workers'];
+var privatePages = ['workers'];
 
 var MyApp = function MyApp(_ref) {
   var Component = _ref.Component,
@@ -88033,7 +88033,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login/Login.js";
+
+var _this = undefined,
+    _jsxFileName = "/Users/checa/Desktop/checa/nextjs/pages/login/Login.js";
+
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -88093,39 +88096,43 @@ var LoginUI = function LoginUI(_ref) {
   }, [data]);
 
   if (isLogged) {
-    router.push('/home');
+    router.push('/workers');
   }
 
   return __jsx("div", {
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_16___default.a.content,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: this
+      lineNumber: 51,
+      columnNumber: 10
+    }
   }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_11__["default"], {
     elevation: 3,
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_16___default.a.paper,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
+      lineNumber: 52,
+      columnNumber: 5
+    }
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_12__["default"], {
     align: "center",
     variant: "h2",
     gutterBottom: true,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: this
+      lineNumber: 53,
+      columnNumber: 7
+    }
   }, "Login"), __jsx(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
-    },
-    __self: this
+      lineNumber: 56,
+      columnNumber: 7
+    }
   }), __jsx(formik__WEBPACK_IMPORTED_MODULE_5__["Formik"], {
     validateOnBlur: true,
     initialValues: {
@@ -88138,11 +88145,12 @@ var LoginUI = function LoginUI(_ref) {
         variables: _objectSpread({}, values)
       });
     },
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
-    },
-    __self: this
+      lineNumber: 58,
+      columnNumber: 9
+    }
   }, function (_ref2) {
     var values = _ref2.values,
         errors = _ref2.errors,
@@ -88154,11 +88162,12 @@ var LoginUI = function LoginUI(_ref) {
     return __jsx(formik__WEBPACK_IMPORTED_MODULE_5__["Form"], {
       onSubmit: handleSubmit,
       className: _Login_module_css__WEBPACK_IMPORTED_MODULE_16___default.a.form,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
+        lineNumber: 75,
+        columnNumber: 19
+      }
     }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
       id: "email",
       label: "Email",
@@ -88170,11 +88179,12 @@ var LoginUI = function LoginUI(_ref) {
       error: errors.email && touched.email && !!errors.email,
       helperText: errors.email,
       required: true,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: this
+        lineNumber: 76,
+        columnNumber: 15
+      }
     }), __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_13__["default"], {
       id: "password",
       label: "Password",
@@ -88186,18 +88196,20 @@ var LoginUI = function LoginUI(_ref) {
       error: errors.password && touched.password && !!errors.password,
       helperText: errors.password,
       required: true,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
-      },
-      __self: this
+        lineNumber: 77,
+        columnNumber: 15
+      }
     }), __jsx("div", {
       className: _Login_module_css__WEBPACK_IMPORTED_MODULE_16___default.a.buttonBox,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
-      },
-      __self: this
+        lineNumber: 78,
+        columnNumber: 15
+      }
     }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_15__["default"], {
       className: _Login_module_css__WEBPACK_IMPORTED_MODULE_16___default.a.submit,
       color: "primary",
@@ -88205,41 +88217,46 @@ var LoginUI = function LoginUI(_ref) {
       variant: "contained",
       type: "submit",
       disabled: isSubmitting && !error,
+      __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: this
+        lineNumber: 79,
+        columnNumber: 17
+      }
     }, "Login")));
   }), __jsx("div", {
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_16___default.a.signup,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
+      lineNumber: 94,
+      columnNumber: 7
+    }
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_12__["default"], {
     align: "center",
     color: "primary",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
+      lineNumber: 95,
+      columnNumber: 9
+    }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_10___default.a, {
     href: "/signup",
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
+      lineNumber: 96,
+      columnNumber: 11
+    }
   }, __jsx("a", {
     className: _Login_module_css__WEBPACK_IMPORTED_MODULE_16___default.a.link,
+    __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
+      lineNumber: 97,
+      columnNumber: 13
+    }
   }, "Sign Up"))))));
 };
 
