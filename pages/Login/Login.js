@@ -106,4 +106,4 @@ LoginUI.propTypes = {
   router: PropTypes.object
 }
 
-export const Login = withRouter(LoginUI)
+export default withRouter(LoginUI)

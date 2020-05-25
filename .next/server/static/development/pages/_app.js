@@ -2562,10 +2562,10 @@ const MyApp = ({
   loggedIn,
   pathname
 }) => {
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (loggedIn || !loggedIn && (pathname === '/signup' || pathname === '/login')) return;
-    next_router__WEBPACK_IMPORTED_MODULE_7___default.a.replace(pathname, '/login');
-  }, [pathname]);
+  // useEffect(() => {
+  //   if (loggedIn || (!loggedIn && (pathname === '/signup' || pathname === '/login'))) return
+  //   Router.replace(pathname, '/login')
+  // }, [pathname])
   return __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
     theme: _lib_theme_theme__WEBPACK_IMPORTED_MODULE_9__["theme"],
     __self: undefined,
@@ -2639,44 +2639,33 @@ const MyApp = ({
       lineNumber: 43,
       columnNumber: 9
     }
-  }, !loggedIn && !(pathname === '/signup' || pathname === '/login') ? __jsx(_login__WEBPACK_IMPORTED_MODULE_10__["default"], _extends({}, pageProps, {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 15
-    }
-  })) : __jsx(Component, _extends({}, pageProps, {
+  }, __jsx(Component, _extends({}, pageProps, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47,
-      columnNumber: 15
+      columnNumber: 13
     }
   }))));
-};
+}; // MyApp.getInitialProps = async ({ ctx }) => {
+//   const { req, pathname } = ctx
+//   const token = req
+//     ? getCookie(req.headers.cookie)
+//     : getCookie(document.cookie)
+//   let loggedIn = verifyToken(token)
+//   return {
+//     loggedIn: !!loggedIn,
+//     pathname
+//   }
+// }
+// MyApp.propTypes = {
+//   Component: PropTypes.func,
+//   pageProps: PropTypes.object,
+//   loggedIn: PropTypes.bool,
+//   pathname: PropTypes.string
+// }
 
-MyApp.getInitialProps = async ({
-  ctx
-}) => {
-  const {
-    req,
-    pathname
-  } = ctx;
-  const token = req ? Object(_lib__WEBPACK_IMPORTED_MODULE_8__["getCookie"])(req.headers.cookie) : Object(_lib__WEBPACK_IMPORTED_MODULE_8__["getCookie"])(document.cookie);
-  let loggedIn = Object(_lib__WEBPACK_IMPORTED_MODULE_8__["verifyToken"])(token);
-  return {
-    loggedIn: !!loggedIn,
-    pathname
-  };
-};
 
-MyApp.propTypes = {
-  Component: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  pageProps: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  loggedIn: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-  pathname: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
-};
 /* harmony default export */ __webpack_exports__["default"] = (Object(_lib__WEBPACK_IMPORTED_MODULE_8__["withApollo"])({
   ssr: true
 })(MyApp));
@@ -2704,12 +2693,11 @@ module.exports = {
 /*!******************************!*\
   !*** ./pages/login/Login.js ***!
   \******************************/
-/*! exports provided: Login */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
@@ -2964,7 +2952,7 @@ const LoginUI = ({
 LoginUI.propTypes = {
   router: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
-const Login = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(LoginUI);
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(LoginUI));
 
 /***/ }),
 
@@ -2998,7 +2986,7 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Login */ "./pages/login/Login.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Login__WEBPACK_IMPORTED_MODULE_0__["Login"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Login__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 

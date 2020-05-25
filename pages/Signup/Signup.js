@@ -40,7 +40,7 @@ const SignupSchema = Yup.object().shape({
     }),
 })
 
-export const Signup = () => {
+const Signup = () => {
   const [signUp, { data }] = useMutation(SIGN_UP)
   console.log('data', data)
   return <div className={styles.content}>
@@ -91,3 +91,5 @@ export const Signup = () => {
     </Paper>
   </div>
 }
+
+export default Signup

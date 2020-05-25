@@ -18,10 +18,10 @@ import styles from './app.module.css'
 const privatePages = ['workers']
 
 const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
-  useEffect(() => {
-    if (loggedIn || (!loggedIn && (pathname === '/signup' || pathname === '/login'))) return
-    Router.replace(pathname, '/login')
-  }, [pathname])
+  // useEffect(() => {
+  //   if (loggedIn || (!loggedIn && (pathname === '/signup' || pathname === '/login'))) return
+  //   Router.replace(pathname, '/login')
+  // }, [pathname])
 
   return (
     <ThemeProvider theme={theme}>
@@ -41,36 +41,36 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
           </Toolbar>
         </AppBar>
         <div className={styles.content}>
-        {
+        {/* {
           !loggedIn && !(pathname === '/signup' || pathname === '/login')
-            ? <LoginPage {...pageProps}/>
-            : <Component {...pageProps} />
-        }
+            ? <LoginPage {...pageProps}/> */}
+            <Component {...pageProps} />
+        {/* } */}
         </div>
   </ThemeProvider>
   )
 }
 
-MyApp.getInitialProps = async ({ ctx }) => {
-  const { req, pathname } = ctx
+// MyApp.getInitialProps = async ({ ctx }) => {
+//   const { req, pathname } = ctx
 
-  const token = req
-    ? getCookie(req.headers.cookie)
-    : getCookie(document.cookie)
+//   const token = req
+//     ? getCookie(req.headers.cookie)
+//     : getCookie(document.cookie)
 
-  let loggedIn = verifyToken(token)
+//   let loggedIn = verifyToken(token)
 
-  return {
-    loggedIn: !!loggedIn,
-    pathname
-  }
-}
+//   return {
+//     loggedIn: !!loggedIn,
+//     pathname
+//   }
+// }
 
-MyApp.propTypes = {
-  Component: PropTypes.func,
-  pageProps: PropTypes.object,
-  loggedIn: PropTypes.bool,
-  pathname: PropTypes.string
-}
+// MyApp.propTypes = {
+//   Component: PropTypes.func,
+//   pageProps: PropTypes.object,
+//   loggedIn: PropTypes.bool,
+//   pathname: PropTypes.string
+// }
 
 export default withApollo({ ssr: true })(MyApp)

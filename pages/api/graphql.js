@@ -1,4 +1,5 @@
 import { graphql, buildSchema } from 'graphql'
+import { withCors } from './middlewares/cors'
 import { verifyToken, getCookie } from '../../lib'
 
 import { getUsers, getUserById, signUp, login } from './user'
@@ -60,6 +61,7 @@ const root = {
 }
 
 export default async (req, res) => {
+  await withCors(req, res)
   const { query, variables } = req.body
   const token = getCookie(req.headers.cookie)
   const context = verifyToken(token) || {}

@@ -11,7 +11,7 @@ import data from '../../data/posts.json'
 
 import styles from './Home.module.css'
 
-export const Home = () => {
+const Home = () => {
   return data.map(({ img, title, description }, index) => (
     <Card key={index} className={styles.card}>
       <CardActionArea>
@@ -39,3 +39,5 @@ export const Home = () => {
       </CardActions>
     </Card>))
 }
+
+export default Home

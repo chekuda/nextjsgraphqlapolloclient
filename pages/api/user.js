@@ -69,6 +69,7 @@ export const login = connectToDb(async ({ email, password }) => {
   Get all users
 */
 export const getUsers = connectToDb(async () => {
+  console.log('called')
   try {
     let user = await User.find()
     return user
