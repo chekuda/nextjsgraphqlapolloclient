@@ -17,9 +17,11 @@ import styles from './app.module.css'
 
 const privatePages = ['home', 'trends', 'preferidos', 'workers']
 
+const publicPages = ['/home', '/signup', '/login']
+
 const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
   useEffect(() => {
-    if (loggedIn || (!loggedIn && (pathname === '/signup' || pathname === '/login'))) return
+    if (loggedIn || (!loggedIn && publicPages.includes(pathname))) return
     Router.replace(pathname, '/login')
   }, [pathname])
 
@@ -42,7 +44,7 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
         </AppBar>
         <div className={styles.content}>
         {
-          !loggedIn && !(pathname === '/signup' || pathname === '/login')
+          !loggedIn && !(publicPages.includes(pathname))
             ? <LoginPage {...pageProps}/>
             : <Component {...pageProps} />
         }
