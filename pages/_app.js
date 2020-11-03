@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
+import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
 import Router from 'next/router'
@@ -17,7 +18,7 @@ import styles from './app.module.css'
 
 const privatePages = ['home', 'trends', 'preferidos', 'workers']
 
-const publicPages = ['/home', '/signup', '/login']
+const publicPages = ['/home', '/signup', '/login', '/test']
 
 const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
   useEffect(() => {
@@ -42,13 +43,15 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
             <UserHeader loggedIn={loggedIn}/>
           </Toolbar>
         </AppBar>
-        <div className={styles.content}>
-        {
-          !loggedIn && !(publicPages.includes(pathname))
-            ? <LoginPage {...pageProps}/>
-            : <Component {...pageProps} />
-        }
-        </div>
+        <Grid container spacing={0} className={styles.content}>
+          <Grid item xs={12} spacing={2}>
+            {
+              !loggedIn && !(publicPages.includes(pathname))
+                ? <LoginPage {...pageProps}/>
+                : <Component {...pageProps} />
+            }
+          </Grid>
+        </Grid>
   </ThemeProvider>
   )
 }

@@ -19,10 +19,5 @@
   color: var(--white-color);
 }
 .content {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 74px 8px 8px 8px;
-  justify-content: center;
-  overflow: scroll;
-  height: calc(100vh - 84px);
+  padding: 74px 24px 0px 24px;
 }
