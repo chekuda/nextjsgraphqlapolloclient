@@ -1,18 +1,27 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Grid, Paper } from '@material-ui/core'
 
-import styles from './WithSidebar.module.css'
-
+// import styles from './WithSidebar.module.css'
 
 const SideBarContainer = ({ sidebar }) =>
   <Grid container direction='column'>
     {sidebar}
   </Grid>
 
+SideBarContainer.propTypes = {
+  sidebar: PropTypes.node,
+}
+
 const Main = ({ contentWithPaper, main }) =>
   contentWithPaper
     ? <Paper>{main}</Paper>
     : main
+
+Main.propTypes = {
+  main: PropTypes.node,
+  contentWithPaper: PropTypes.bool,
+}
 
 export const WithSidebar = ({ main, sidebar, contentWithPaper, sidebarPos = 'right' }) => {
   return (
@@ -33,4 +42,11 @@ export const WithSidebar = ({ main, sidebar, contentWithPaper, sidebarPos = 'rig
       </Grid>
     </Grid>
   )
+}
+
+WithSidebar.propTypes = {
+  main: PropTypes.node,
+  sidebar: PropTypes.node,
+  contentWithPaper: PropTypes.bool,
+  sidebarPos: PropTypes.oneOf(['left', 'right']),
 }

@@ -1,6 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
+import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
@@ -45,4 +47,16 @@ export const SimpleCard = ({
       </CardActions>
     </Card>
   )
+}
+
+SimpleCard.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  description: PropTypes.string,
+  CustomButton: PropTypes.node,
+  buttonText: PropTypes.string,
+  onClick: PropTypes.func,
+  variant: PropTypes.string,
+  classes: PropTypes.object,
+  cardMedia: PropTypes.bool,
 }
