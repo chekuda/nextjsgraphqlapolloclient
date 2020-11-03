@@ -19,5 +19,8 @@
   color: var(--white-color);
 }
 .content {
-  padding: 74px 24px 0px 24px;
+  padding: 64px 24px 0px 24px;
+}
+.fluidContent {
+  padding: 64px 0px 0px 0px;
 }
