@@ -25,7 +25,7 @@
     "formik": "^2.2.1",
     "graphql": "^14.7.0",
     "jsonwebtoken": "^8.5.1",
-    "jsxclassnames": "^1.0.5",
+    "jsxclassnames": "^1.0.6",
     "mongoose": "^5.10.11",
     "next": "^9.5.5",
     "node-fetch": "^2.6.1",
