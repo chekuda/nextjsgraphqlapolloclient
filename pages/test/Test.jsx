@@ -2,9 +2,9 @@ import React, { Fragment } from 'react'
 
 import Grid from '@material-ui/core/Grid'
 
-import { WithSidebar } from '../../layouts/WithSidebar'
-import { HorizontalSection} from '../../layouts/HorizontalSection'
-import { SimpleCard } from '../../components/SimpleCard'
+import { WithSidebar } from 'layouts/WithSidebar'
+import { HorizontalSection} from 'layouts/HorizontalSection'
+import { SimpleCard } from 'components/SimpleCard'
 
 const TestLayout = ({ currentNavBarHeight }) => {
   console.log('currentNavBarHeight', currentNavBarHeight)

@@ -9,11 +9,12 @@ import Link from 'next/link'
 import Router from 'next/router'
 import jsxclassnames from 'jsxclassnames'
 
-import { getCurretReftHeight } from '../helpers/dom'
-import { withApollo, verifyToken, getCookie } from '../lib'
-import { theme } from '../lib/theme/theme'
+import { getCurretReftHeight } from 'helpers/dom'
+import { withApollo, verifyToken, getCookie } from 'lib'
+import { theme } from 'lib/theme/theme'
 import LoginPage from './login'
-import UserHeader from '../components/UserHeader'
+import UserHeader from 'components/UserHeader'
+
 import '../styles/global.css'
 import styles from './app.module.css'
 
