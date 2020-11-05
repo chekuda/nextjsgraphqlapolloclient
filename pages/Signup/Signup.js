@@ -9,7 +9,7 @@ import TextField from '@material-ui/core/TextField'
 import Divider from '@material-ui/core/Divider'
 import Button from '@material-ui/core/Button'
 
-import styles from './Signup.module.css'
+import styles from './Signup.styles.js'
 
 const SIGN_UP = gql`
   mutation SignUp($user: UserInput!) {
@@ -41,10 +41,11 @@ const SignupSchema = Yup.object().shape({
 })
 
 export const Signup = () => {
+  const classes = styles()
   const [signUp, { data }] = useMutation(SIGN_UP)
   console.log('data', data)
-  return <div className={styles.content}>
-    <Paper elevation={3} className={styles.paper}>
+  return <div className={classes.content}>
+    <Paper elevation={3} className={classes.paper}>
       <Typography align='center' variant='h2' gutterBottom={true}>
         Signup
       </Typography>
@@ -67,14 +68,14 @@ export const Signup = () => {
             handleSubmit,
             isSubmitting,
           }) => {
-           return <Form onSubmit={handleSubmit} className={styles.form}>
+           return <Form onSubmit={handleSubmit} className={classes.form}>
               <TextField id="userName" label="Username" margin='normal' value={values.userName} onChange={handleChange} onBlur={handleBlur} error={errors.userName && touched.userName && errors.userName} helperText={errors.userName} required/>
               <TextField id="email" label="Email" type='email' margin='normal' value={values.email} onChange={handleChange} onBlur={handleBlur} error={errors.email && touched.email && errors.email} helperText={errors.email} required/>
               <TextField id="password" label="Password (min 6 characters)" type='password' margin='normal' value={values.password} onChange={handleChange} onBlur={handleBlur} error={errors.password && touched.password && errors.password} helperText={errors.password} required/>
               <TextField id="confirmpassword" label="Confirm Passowrd" type='password' margin='normal' value={values.confirmpassword} onChange={handleChange} onBlur={handleBlur} error={errors.confirmpassword && touched.confirmpassword && errors.confirmpassword} helperText={errors.confirmpassword} required/>
-              <div className={styles.buttonBox}>
+              <div className={classes.buttonBox}>
                 <Button
-                  className={styles.submit}
+                  className={classes.submit}
                   color='primary'
                   size='large'
                   variant='contained'

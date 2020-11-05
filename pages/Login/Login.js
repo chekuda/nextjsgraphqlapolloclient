@@ -12,7 +12,7 @@ import TextField from '@material-ui/core/TextField'
 import Divider from '@material-ui/core/Divider'
 import Button from '@material-ui/core/Button'
 
-import styles from './Login.module.css'
+import styles from './Login.styles.js'
 
 const LOGIN = gql`
   mutation Login($email: String!, $password: String!) {
@@ -35,6 +35,7 @@ const LoginSchema = Yup.object().shape({
 })
 
 const LoginUI = ({ router }) => {
+  const classes = styles()
   const [login, { data = {}, error }] = useMutation(LOGIN)
   const [isLogged, setIsLogged] = useState(false)
   useEffect(() => {
@@ -48,8 +49,8 @@ const LoginUI = ({ router }) => {
     router.push('/home')
   }
 
-  return <div className={styles.content}>
-    <Paper elevation={3} className={styles.paper}>
+  return <div className={classes.content}>
+    <Paper elevation={3} className={classes.paper}>
       <Typography align='center' variant='h2' gutterBottom={true}>
         Login
       </Typography>
@@ -72,12 +73,12 @@ const LoginUI = ({ router }) => {
             handleSubmit,
             isSubmitting,
           }) => {
-           return <Form onSubmit={handleSubmit} className={styles.form}>
+           return <Form onSubmit={handleSubmit} className={classes.form}>
               <TextField id="email" label="Email" type='email' margin='normal' value={values.email} onChange={handleChange} onBlur={handleBlur} error={errors.email && touched.email && !!errors.email} helperText={errors.email} required/>
               <TextField id="password" label="Password" type='password' margin='normal' value={values.password} onChange={handleChange} onBlur={handleBlur} error={errors.password && touched.password && !!errors.password} helperText={errors.password} required/>
-              <div className={styles.buttonBox}>
+              <div className={classes.buttonBox}>
                 <Button
-                  className={styles.submit}
+                  className={classes.submit}
                   color='primary'
                   size='large'
                   variant='contained'
@@ -91,10 +92,10 @@ const LoginUI = ({ router }) => {
           }}
         </Formik>
       }
-      <div className={styles.signup}>
+      <div className={classes.signup}>
         <Typography align='center' color='primary'>
           <Link href='/signup'>
-            <a className={styles.link}>Sign Up</a>
+            <a className={classes.link}>Sign Up</a>
           </Link>
         </Typography>
       </div>

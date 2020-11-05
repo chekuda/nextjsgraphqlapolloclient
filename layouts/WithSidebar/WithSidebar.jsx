@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Grid, Paper } from '@material-ui/core'
 
-// import styles from './WithSidebar.module.css'
+// import styles from './WithSidebar.styles.js'
 
 const SideBarContainer = ({ sidebar }) =>
   <Grid container direction='column'>

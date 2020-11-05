@@ -7,7 +7,8 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
-import styles from './SimpleCard.module.css'
+import styles from './SimpleCard.styles.js'
+import jsxclassnames from 'jsxclassnames'
 
 export const SimpleCard = ({
     title = 'Title',
@@ -17,14 +18,15 @@ export const SimpleCard = ({
     buttonText = 'Saber mas',
     onClick= () => {},
     variant = 'outlined',
-    classes = {},
+    parentClasses = {},
     cardMedia,
   }) => {
+    const classes = styles()
   return (
-    <Card className={classes} variant={variant}>
+    <Card className={jsxclassnames(parentClasses)} variant={variant}>
       { cardMedia &&
         <CardMedia
-          className={styles.media}
+          className={classes.media}
           image="/static/images/cards/contemplative-reptile.jpg"
           title="Contemplative Reptile"
         />
@@ -33,7 +35,7 @@ export const SimpleCard = ({
         <Typography variant="h5" component="h2">
           {title}
         </Typography>
-        <Typography className={styles.pos} color="textSecondary">
+        <Typography className={classes.pos} color="textSecondary">
           {subtitle}
         </Typography>
         <Typography variant="body2" component="p">
@@ -57,6 +59,6 @@ SimpleCard.propTypes = {
   buttonText: PropTypes.string,
   onClick: PropTypes.func,
   variant: PropTypes.string,
-  classes: PropTypes.object,
+  parentClasses: PropTypes.object,
   cardMedia: PropTypes.bool,
 }

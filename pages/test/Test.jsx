@@ -8,14 +8,13 @@ import { HorizontalSection} from 'layouts/HorizontalSection'
 // import { SimpleCard } from 'components/SimpleCard'
 
 const TestLayout = ({ currentNavBarHeight }) => {
-  console.log('currentNavBarHeight', currentNavBarHeight)
   return (
       // <WithSidebar
       //   main={<div>jose</div>}
       //   sidebar={<SideBar/>}
       // />
     <Fragment>
-      <HorizontalSection currentNavBarHeight={currentNavBarHeight} backgroundColor='yellow'/>
+      <HorizontalSection currentNavBarHeight={currentNavBarHeight} backgroundColor='bgYellow'/>
       <HorizontalSection currentNavBarHeight={currentNavBarHeight}/>
     </Fragment>
   )

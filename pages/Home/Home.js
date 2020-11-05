@@ -10,15 +10,16 @@ import CardMedia from '@material-ui/core/CardMedia'
 
 import data from '../../data/posts.json'
 
-import styles from './Home.module.css'
+import styles from './Home.styles.js'
 
 export const Home = () => {
+  const classes = styles()
   return <Grid container spacing={2} justify='center'>
     { data.map(({ img, title, description }, index) => (
-        <Card key={index} className={styles.card} >
+        <Card key={index} className={classes.card} >
         <CardActionArea>
           <CardMedia
-            className={styles.cardMedia}
+            className={classes.cardMedia}
             image={img}
             title={title}
           />
@@ -26,7 +27,7 @@ export const Home = () => {
             <Typography gutterBottom variant="h5" component="h2">
               {title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p" className={styles.description}>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.description}>
               {description}
             </Typography>
           </CardContent>
