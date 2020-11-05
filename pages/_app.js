@@ -16,13 +16,14 @@ import LoginPage from './login'
 import UserHeader from 'components/UserHeader'
 
 import '../styles/global.css'
-import styles from './app.module.css'
+import styles from './app.styles.js'
 
 const pages = ['home', 'trends', 'preferidos', 'workers', 'test']
 
 const publicPages = ['/home', '/signup', '/login', '/test']
 
 const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
+  const classes = styles()
   const appBarEl = useRef(null)
   const [navBar, setNavbar] = useState(null)
   useEffect(() => {
@@ -34,8 +35,8 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
   return (
     <ThemeProvider theme={theme}>
         <AppBar position='fixed' color='primary' ref={appBarEl}>
-          <Toolbar className={styles.header}>
-            <div className={styles.menu}>
+          <Toolbar className={classes.header}>
+            <div className={classes.menu}>
               {
                 pages.map(page =>
                   <Typography key={page}>
@@ -48,7 +49,7 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
             <UserHeader loggedIn={loggedIn}/>
           </Toolbar>
         </AppBar>
-        <Grid container className={jsxclassnames(styles.fluidContent, { [styles.content]: false })}>
+        <Grid container className={jsxclassnames(classes.fluidContent, { [classes.content]: false })}>
           {
             !loggedIn && !(publicPages.includes(pathname))
               ? <LoginPage {...pageProps}/>
