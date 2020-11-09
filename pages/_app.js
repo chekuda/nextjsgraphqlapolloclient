@@ -19,8 +19,8 @@ import '../styles/global.css'
 import styles from './app.styles.js'
 
 const pages = ['home', 'trends', 'preferidos', 'workers', 'test']
-
 const publicPages = ['/home', '/signup', '/login', '/test']
+const topImage = true // Enable topImage if want to have imag ontop of header
 
 const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
   const classes = styles()
@@ -34,22 +34,30 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
   const currentNavBarHeight = useMemo(() => getCurretReftHeight(navBar), [navBar])
   return (
     <ThemeProvider theme={theme}>
-        <AppBar position='fixed' color='primary' ref={appBarEl}>
-          <Toolbar className={classes.header}>
-            <div className={classes.menu}>
-              {
-                pages.map(page =>
-                  <Typography key={page}>
-                    <Link href={`/${page}`}>
-                      <a title={page}>{page}</a>
-                    </Link>
-                  </Typography>)
-              }
+        <div ref={appBarEl} className={classes.topHeadContainer}>
+          {
+            topImage && <div className={classes.overHeadImage}>
+              <img className={classes.topImage} src='/trnsparente.png' alt="logo" />
             </div>
-            <UserHeader loggedIn={loggedIn}/>
-          </Toolbar>
-        </AppBar>
-        <Grid container className={jsxclassnames(classes.fluidContent, { [classes.content]: false })}>
+          }
+          <AppBar position='relative' color='default'>
+            <Toolbar className={classes.header}>
+              <div className={classes.menu}>
+                {
+                  pages.map(page =>
+                    <Typography key={page}>
+                      <Link href={`/${page}`}>
+                        <a title={page}>{page}</a>
+                      </Link>
+                    </Typography>)
+                }
+              </div>
+              <UserHeader loggedIn={loggedIn}/>
+            </Toolbar>
+          </AppBar>
+        </div>
+        {/** Enable type of content */}
+        <Grid container className={jsxclassnames({ [classes.fluidContent]: false } , { [classes.content]: false })} style={{ paddingTop: currentNavBarHeight }}>
           {
             !loggedIn && !(publicPages.includes(pathname))
               ? <LoginPage {...pageProps}/>

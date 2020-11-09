@@ -6,7 +6,7 @@ export default makeStyles(theme => {
     display: 'flex',
     justifyContent: 'space-between',
     '& a': {
-      color: theme.palette.common.white,
+      color: theme.palette.common.black,
       textDecoration: 'none',
       cursor: 'pointer',
       paddingRight: '20px',
@@ -24,10 +24,26 @@ export default makeStyles(theme => {
       color: theme.palette.secondary
     }
   },
+  topHeadContainer: {
+    width: '100%',
+    position: 'fixed',
+  },
   content: {
-    padding: '64px 24px 0px 24px'
+    padding: '0px 24px 0px 24px'
   },
   fluidContent: {
-    padding: '64px 0px 0px 0px'
-  }}
+    padding: '0px 0px 0px 0px'
+  },
+  overHeadImage: {
+    height: '360px',
+    width: '100%',
+    background: theme.palette.common.black,
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  topImage: {
+    width: 700,
+    height: '100%',
+  }
+}
 })
