@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => {
+  console.log('theme', theme)
   return {
     header: {
     display: 'flex',
@@ -15,9 +16,6 @@ export default makeStyles(theme => {
         color: theme.palette.secondary.main
       },
     },
-  },
-  menu: {
-    display: 'flex'
   },
   button: {
     '& span': {

@@ -5,6 +5,10 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import Box from '@material-ui/core/Box'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+
 import Link from 'next/link'
 import Router from 'next/router'
 import jsxclassnames from 'jsxclassnames'
@@ -21,7 +25,7 @@ import styles from './app.styles.js'
 const pages = ['home', 'trends', 'preferidos', 'workers', 'test']
 const publicPages = ['/home', '/signup', '/login', '/test']
 
-const MyApp = ({ Component, pageProps, loggedIn, pathname, hasTopImage }) => {
+const MyApp = ({ Component, pageProps, loggedIn, pathname, hasTopImage, withLoginFeature }) => {
   const classes = styles()
   const appBarEl = useRef(null)
   const [navBar, setNavbar] = useState(null)
@@ -34,36 +38,41 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname, hasTopImage }) => {
   useEffect(() => setCurrentNavBarHeight(getCurretReftHeight(navBar)), [navBar, pathname])
   return (
     <ThemeProvider theme={theme}>
-        <div ref={appBarEl} className={classes.topHeadContainer}>
-          {
-            hasTopImage && <div className={classes.overHeadImage}>
-              <img className={classes.topImage} src='/trnsparente.png' alt="logo" />
-            </div>
-          }
-          <AppBar position='relative' color='default'>
-            <Toolbar className={classes.header}>
-              <div className={classes.menu}>
-                {
-                  pages.map(page =>
-                    <Typography key={page}>
-                      <Link href={`/${page}`}>
-                        <a title={page}>{page}</a>
-                      </Link>
-                    </Typography>)
-                }
-              </div>
-              <UserHeader loggedIn={loggedIn}/>
-            </Toolbar>
-          </AppBar>
-        </div>
-        {/** Enable type of content */}
-        <Grid container className={jsxclassnames({ [classes.fluidContent]: false } , { [classes.content]: false })} style={{ paddingTop: currentNavBarHeight }}>
-          {
-            !loggedIn && !(publicPages.includes(pathname))
-              ? <LoginPage {...pageProps}/>
-              : <Component {...pageProps} currentNavBarHeight={currentNavBarHeight}/>
-          }
-        </Grid>
+      <div ref={appBarEl} className={classes.topHeadContainer}>
+        {
+          hasTopImage && <div className={classes.overHeadImage}>
+            <img className={classes.topImage} src='/trnsparente.png' alt="logo" />
+          </div>
+        }
+        <AppBar position='relative' color='default'>
+          <Toolbar className={classes.header}>
+            <Box display={{ xs: 'block', sm: 'none' }}>
+              <IconButton edge="start" color="inherit" aria-label="menu">
+                <MenuIcon />
+              </IconButton>
+            </Box>
+            <Box display={{ xs: 'none', sm: 'flex' }} aria-label="menu">
+              {
+                pages.map(page =>
+                  <Typography key={page}>
+                    <Link href={`/${page}`}>
+                      <a title={page}>{page}</a>
+                    </Link>
+                  </Typography>)
+              }
+            </Box>
+            { withLoginFeature && <UserHeader loggedIn={loggedIn}/> }
+          </Toolbar>
+        </AppBar>
+      </div>
+      {/** Enable type of content */}
+      <Grid container className={jsxclassnames({ [classes.fluidContent]: false } , { [classes.content]: false })} style={{ paddingTop: currentNavBarHeight }}>
+        {
+          !loggedIn && !(publicPages.includes(pathname))
+            ? <LoginPage {...pageProps}/>
+            : <Component {...pageProps} currentNavBarHeight={currentNavBarHeight}/>
+        }
+      </Grid>
   </ThemeProvider>
   )
 }
@@ -80,7 +89,8 @@ MyApp.getInitialProps = async ({ ctx }) => {
   return {
     loggedIn: !!loggedIn,
     pathname,
-    hasTopImage: pathname.includes('home')
+    hasTopImage: pathname.includes('home'),
+    withLoginFeature: false, // Enable for login feature
   }
 }
 
@@ -90,6 +100,7 @@ MyApp.propTypes = {
   loggedIn: PropTypes.bool,
   pathname: PropTypes.string,
   hasTopImage: PropTypes.bool,
+  withLoginFeature: PropTypes.bool,
 }
 
 export default withApollo({ ssr: true })(MyApp)
