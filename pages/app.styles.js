@@ -27,6 +27,7 @@ export default makeStyles(theme => {
   topHeadContainer: {
     width: '100%',
     position: 'fixed',
+    zIndex: 2,
   },
   content: {
     padding: '0px 24px 0px 24px'

@@ -12,7 +12,7 @@ import data from '../../data/posts.json'
 
 import styles from './Home.styles.js'
 
-export const Home = () => {
+const Home = () => {
   const classes = styles()
   return <Grid container spacing={2} justify='center'>
     { data.map(({ img, title, description }, index) => (
@@ -44,3 +44,5 @@ export const Home = () => {
     ))}
   </Grid>
 }
+
+export default Home

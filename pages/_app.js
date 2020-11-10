@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useMemo } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -20,23 +20,23 @@ import styles from './app.styles.js'
 
 const pages = ['home', 'trends', 'preferidos', 'workers', 'test']
 const publicPages = ['/home', '/signup', '/login', '/test']
-const topImage = true // Enable topImage if want to have imag ontop of header
 
-const MyApp = ({ Component, pageProps, loggedIn, pathname }) => {
+const MyApp = ({ Component, pageProps, loggedIn, pathname, hasTopImage }) => {
   const classes = styles()
   const appBarEl = useRef(null)
   const [navBar, setNavbar] = useState(null)
+  const [currentNavBarHeight, setCurrentNavBarHeight] = useState(0)
   useEffect(() => {
     if (loggedIn || (!loggedIn && publicPages.includes(pathname))) return
     Router.replace(pathname, '/login')
   }, [pathname])
-  useEffect(() => setNavbar(appBarEl), [appBarEl])
-  const currentNavBarHeight = useMemo(() => getCurretReftHeight(navBar), [navBar])
+  useEffect(() => setNavbar(appBarEl), [appBarEl, pathname])
+  useEffect(() => setCurrentNavBarHeight(getCurretReftHeight(navBar)), [navBar, pathname])
   return (
     <ThemeProvider theme={theme}>
         <div ref={appBarEl} className={classes.topHeadContainer}>
           {
-            topImage && <div className={classes.overHeadImage}>
+            hasTopImage && <div className={classes.overHeadImage}>
               <img className={classes.topImage} src='/trnsparente.png' alt="logo" />
             </div>
           }
@@ -79,7 +79,8 @@ MyApp.getInitialProps = async ({ ctx }) => {
 
   return {
     loggedIn: !!loggedIn,
-    pathname
+    pathname,
+    hasTopImage: pathname.includes('home')
   }
 }
 
@@ -87,7 +88,8 @@ MyApp.propTypes = {
   Component: PropTypes.func,
   pageProps: PropTypes.object,
   loggedIn: PropTypes.bool,
-  pathname: PropTypes.string
+  pathname: PropTypes.string,
+  hasTopImage: PropTypes.bool,
 }
 
 export default withApollo({ ssr: true })(MyApp)
