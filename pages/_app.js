@@ -22,8 +22,8 @@ import UserHeader from 'components/UserHeader'
 import '../styles/global.css'
 import styles from './app.styles.js'
 
-const pages = ['home', 'trends', 'preferidos', 'workers', 'test']
-const publicPages = ['/home', '/signup', '/login', '/test']
+const pages = ['home', 'trends', 'preferidos', 'workers', 'test', 'pintura']
+const publicPages = ['/home', '/signup', '/login', '/test', '/pintura']
 
 const MyApp = ({ Component, pageProps, loggedIn, pathname, hasTopImage, withLoginFeature }) => {
   const classes = styles()
