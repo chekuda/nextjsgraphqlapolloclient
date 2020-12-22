@@ -2,5 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/pintura": "pages/pintura.js"
+  "/pintura": "pages/pintura.js",
+  "/home": "pages/home.js"
 }
