@@ -12,11 +12,12 @@ import Button from '@material-ui/core/Button'
 import styles from './Signup.styles.js'
 
 const SIGN_UP = gql`
-  mutation SignUp($user: UserInput!) {
-    signUp(user: $UserInput) {
+  mutation SignUp($userName: String!, $email: String!, $password: String!) {
+    signUp(userName: $userName, email: $email, password: $password) {
       user {
         userName
         email
+        password
       }
       token
     }
@@ -43,6 +44,7 @@ const SignupSchema = Yup.object().shape({
 export const Signup = () => {
   const classes = styles()
   const [signUp, { data }] = useMutation(SIGN_UP)
+  console.log()
   console.log('data', data)
   return <div className={classes.content}>
     <Paper elevation={3} className={classes.paper}>
@@ -56,6 +58,7 @@ export const Signup = () => {
           initialValues={{ userName: '', email: '', password: '', confirmpassword: '' }}
           validationSchema={SignupSchema}
           onSubmit={values => {
+            console.log('values', values)
             signUp({ variables: { ...values } })
           }}
         >

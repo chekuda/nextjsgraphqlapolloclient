@@ -16,11 +16,9 @@ const validateEmail = email => {
  * SignUp
 */
 export const signUp = connectToDb(async ({
-  user: {
-    userName,
-    email,
-    password
-  }
+  userName,
+  email,
+  password
 }) => {
   try {
     validateEmail(email)
@@ -29,7 +27,7 @@ export const signUp = connectToDb(async ({
       throw new Error('User Already exist')
     }
     const hashedPassword = await bcrypt.hash(password, 10)
-    let user = await User.create({
+    const user = await User.create({
       userName,
       email,
       password: hashedPassword,

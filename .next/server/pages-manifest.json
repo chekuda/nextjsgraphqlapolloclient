@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/pintura": "pages/pintura.js",
-  "/home": "pages/home.js"
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/signup": "pages/signup.js",
+  "/api/graphql": "pages/api/graphql.js"
 }

@@ -30,6 +30,7 @@ const MyApp = ({ Component, pageProps, loggedIn, pathname, hasTopImage, withLogi
   const appBarEl = useRef(null)
   const [navBar, setNavbar] = useState(null)
   const [currentNavBarHeight, setCurrentNavBarHeight] = useState(0)
+  console.log('pathname', pathname)
   useEffect(() => {
     if (loggedIn || (!loggedIn && publicPages.includes(pathname))) return
     Router.replace(pathname, '/login')
