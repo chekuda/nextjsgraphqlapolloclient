@@ -33,7 +33,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "validator": "^12.2.0",
+    "validator": "^13.7.0",
     "yup": "^0.28.5"
   },
   "devDependencies": {
